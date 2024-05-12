@@ -166,13 +166,13 @@
 							</material:TextField.Attachments>
 						</material:TextField>
 						<Label TextColor="Red" HorizontalOptions="Start"  Margin="100,0" FontFamily="Battambang-Regular" IsVisible="False" FontSize="12" x:Name="invalid_phone"></Label>
-						<Frame x:Name="confirm" CornerRadius="10" Margin="0,0,0,40" WidthRequest="400" BackgroundColor="#333333"  HorizontalOptions="Center">
-							<Label  Text="CONFIRM" FontSize="22" TextColor="White" FontFamily="Battambang-Regular" FontAttributes="Bold" VerticalOptions="Center">
+						<ContentView x:Name="confirm" Margin="0,0,0,40" WidthRequest="400" HeightRequest="75" BackgroundColor="#333333"  HorizontalOptions="Center">
+							<Label  Text="CONFIRM" FontSize="20" TextColor="White" HorizontalOptions="Center" FontFamily="Battambang-Regular" FontAttributes="Bold" VerticalOptions="Center">
 							</Label>
-							<Frame.GestureRecognizers>
+							<ContentView.GestureRecognizers>
 								<TapGestureRecognizer Tapped="OnTappedConfirm"/>
-							</Frame.GestureRecognizers>
-						</Frame>
+							</ContentView.GestureRecognizers>
+						</ContentView>
 					</VerticalStackLayout>
 					<Border BackgroundColor="White" HeightRequest="100" Stroke="#917c00">
 						<Grid x:Name="footer">

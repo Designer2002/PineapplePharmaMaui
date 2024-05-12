@@ -68,7 +68,7 @@ class ConnectionManager
         if(responce == (int)SentDataMessages.SUCCESS) return true;
         return false;
     }
-    public async static Task<ShoppingCart> GetShoppingCart()
+    public async static Task<List<MedicineShoppingCartView>> GetShoppingCart()
     {
         var data = new { QueryType = 4} ;
 
@@ -82,17 +82,17 @@ class ConnectionManager
         {
             if (responseCode == (int)SentDataMessages.ERROR)
             {
-                return new ShoppingCart(); // Ошибка входа
+                return new List<MedicineShoppingCartView>(); // Ошибка входа
             }
         }
         else
         {
             // Десериализуем ответ в объект User
-            var cart = JsonSerializer.Deserialize<ShoppingCart>(Client.GetInstance().responseData);
+            var cart = JsonSerializer.Deserialize<List<MedicineShoppingCartView>>(Client.GetInstance().responseData);
 
-            return cart == null ? new ShoppingCart() : cart; // Успешный вход
+            return cart == null ? new List<MedicineShoppingCartView>() : cart; // Успешный вход
         }
-        return new ShoppingCart();
+        return new List<MedicineShoppingCartView>();
     }
 
     internal static async Task<List<Medicine>> GetCategoryList(string category)

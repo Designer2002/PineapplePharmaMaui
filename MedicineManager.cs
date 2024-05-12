@@ -53,7 +53,7 @@ public class MedicineManager
     //     return medicines.Where(i => i.Id == id).First();
     // }
 
-    public Task<ShoppingCart> ShoppingCart => ConnectionManager.GetShoppingCart();
+    public Task<List<MedicineShoppingCartView>> ShoppingCart => ConnectionManager.GetShoppingCart();
 
     public static Medicine MedicineToDelete { get; set; }
 }

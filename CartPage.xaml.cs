@@ -53,7 +53,7 @@ public partial class CartPage : ContentPage
     public async Task<List<MedicineShoppingCartView>> GetCart()
     {
         var _ = await ConnectionManager.GetShoppingCart();
-        return _.Content == null ? new List<MedicineShoppingCartView>() : _.Content;
+        return _;
     }
 
     private async Task InitializeAsync()
@@ -258,7 +258,18 @@ public partial class CartPage : ContentPage
                 FontFamily = "Battambang-Regular",
                 FontSize = 20
             };
-
+             var price = new Label()
+            {
+                Text = $"${item.Price*int.Parse(count.Text)}",
+                VerticalOptions = LayoutOptions.Center,
+                HorizontalOptions = LayoutOptions.Center,
+                FontFamily = "Battambang-Regular",
+                TextColor = Color.FromRgb(33, 33, 33),
+                LineBreakMode = LineBreakMode.NoWrap,
+                FontSize = 20
+            };
+            grd.Children.Add(price);
+            grd.SetColumn(price, 4);
             var labelUp = new Label()
             {
                 VerticalOptions = LayoutOptions.End,
@@ -282,6 +293,8 @@ public partial class CartPage : ContentPage
                 counter += 1;
                 count.Text = counter.ToString();
                 await ConnectionManager.SetItemCount(item.Id, counter);
+                price.Text = $"${item.Price*int.Parse(count.Text)}";
+                allprice += item.Price;
                 CheckTotal();
             };
             var tappedDown = new TapGestureRecognizer();
@@ -294,7 +307,9 @@ public partial class CartPage : ContentPage
                     counter -= 1;
                     count.Text = counter.ToString();
                     await ConnectionManager.SetItemCount(item.Id, counter);
+                    allprice -= item.Price;
                     CheckTotal();
+                    price.Text = $"${item.Price*int.Parse(count.Text)}";
                 }
             };
             labelDown.GestureRecognizers.Add(tappedDown);
@@ -319,18 +334,7 @@ public partial class CartPage : ContentPage
             };
             grd.Children.Add(count_btns);
             grd.SetColumn(count_btns, 3);
-            var price = new Label()
-            {
-                Text = $"${item.Price*int.Parse(count.Text)}",
-                VerticalOptions = LayoutOptions.Center,
-                HorizontalOptions = LayoutOptions.Center,
-                FontFamily = "Battambang-Regular",
-                TextColor = Color.FromRgb(33, 33, 33),
-                LineBreakMode = LineBreakMode.NoWrap,
-                FontSize = 20
-            };
-            grd.Children.Add(price);
-            grd.SetColumn(price, 4);
+           
             var del = new Label()
             {
                 TextColor = Colors.Maroon,
@@ -375,7 +379,7 @@ public partial class CartPage : ContentPage
     private async void OnTappedConfirm(object sender, TappedEventArgs e)
     {
         
-        await Animations.ButtonFrameColorBlink(confirm, Color.FromArgb("333333"), Colors.LimeGreen);
+        await Animations.BackColorAndScaleBlink(confirm, Color.FromArgb("333333"), Colors.LimeGreen, 1.0, 1.4);
         if (!phone_check.Validate(phone_entry.Text))
             {
                 phone_invalid_image.IsVisible = true;
