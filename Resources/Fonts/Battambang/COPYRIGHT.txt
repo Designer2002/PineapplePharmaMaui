@@ -1,0 +1,1 @@
+Copyright 2019 The Battambang Khmer Project Authors (https://github.com/danhhong/Battambang)

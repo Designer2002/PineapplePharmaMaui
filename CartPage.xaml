@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+	xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             x:Class="winui_cooler.CartPage"
+             NavigationPage.HasNavigationBar="False" 
+             NavigationPage.BackButtonTitle="">
+	<ContentPage.Background>
+		<LinearGradientBrush>
+			<GradientStopCollection>
+				<GradientStop Color="Navy" Offset="0.0"/>
+				<GradientStop Color="Transparent" Offset="0.5"/>
+				<GradientStop Color="Navy" Offset="1.0"/>
+			</GradientStopCollection>
+		</LinearGradientBrush>
+	</ContentPage.Background>
+	<ContentPage.Resources>
+		<FontImageSource x:Key="PhoneIcon" Color="White" FontFamily="Segoe MDL2 Assets" Glyph="&#xE717;" />
+	</ContentPage.Resources>
+	<Grid>
+		<Image Source="basket.jpg" Aspect="AspectFill" Opacity="0.75"/>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<!-- Верхнее навигационное меню -->
+			<Border BackgroundColor="White" Margin="0,20" Grid.Row="0" VerticalOptions="Start" HeightRequest="100" Stroke="#917c00">
+				<Grid x:Name="navbar">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="*" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="40" />
+					</Grid.ColumnDefinitions>
+					<Label Grid.Row="0" Margin="40" Grid.Column="0" Text="PINEAPPLE" CharacterSpacing="1.6" TextColor="#917c00" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="Start" />
+					<!-- Лого -->
+					<Image Grid.Row="0" Grid.Column="1" WidthRequest="75" Source="logo.png" />
+					<!-- Название -->
+					<Label Grid.Row="0" Grid.Column="2" Margin="15" Text="PHARMA" CharacterSpacing="1.6" TextColor="#917c00" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="Start" />
+					<!-- Кнопки навигации -->
+					<StackLayout Grid.Row="0" Grid.Column="2" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+						<Label Margin="10,0" Text="HOME" TextColor="#666666" FontSize="16" FontFamily="Battambang-Regular">
+							<Label.GestureRecognizers>
+								<TapGestureRecognizer Tapped="OnHomeTapped"/>
+							</Label.GestureRecognizers>
+						</Label>
+						<Label Margin="10,0" x:Name="news_btn" Text="NEWS" TextColor="#666666" FontSize="16" FontFamily="Battambang-Regular">
+							<Label.GestureRecognizers>
+								<TapGestureRecognizer Tapped="OnNewsLabelTapped"/>
+							</Label.GestureRecognizers>
+						</Label>
+						<Label Margin="10,0" x:Name="shop_btn" Text="SHOP" TextColor="#666666" FontSize="16" FontFamily="Battambang-Regular">
+							<Label.GestureRecognizers>
+								<TapGestureRecognizer Tapped="OnShopLabelTapped"/>
+							</Label.GestureRecognizers>
+						</Label>
+					</StackLayout>
+					<!-- Иконки -->
+					<Image Grid.Row="0" VerticalOptions="Center" Grid.Column="3" WidthRequest="30" Margin="10,0">
+						<Image.Source>
+							<FontImageSource FontFamily="Segoe MDL2 Assets" Color="#666666" Glyph="&#xE7BF;"/>
+						</Image.Source>
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="OnCartTapped"/>
+						</Image.GestureRecognizers>
+					</Image>
+					<Image Grid.Row="0" VerticalOptions="Center" Grid.Column="4" WidthRequest="30" Margin="10,0">
+						<Image.Source>
+							<FontImageSource FontFamily="Segoe MDL2 Assets" Color="#666666" Glyph="&#xE77B;"/>
+						</Image.Source>
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="OnPersonTapped"/>
+						</Image.GestureRecognizers>
+					</Image>
+					<Image Grid.Row="0" VerticalOptions="Center" Grid.Column="5" WidthRequest="30" Margin="10,0">
+						<Image.Source>
+							<FontImageSource FontFamily="Segoe MDL2 Assets" Color="#666666" Glyph="&#xF3B1;"/>
+						</Image.Source>
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="OnLogoutTapped"/>
+						</Image.GestureRecognizers>
+					</Image>
+				</Grid>
+			</Border>
+			<ScrollView VerticalScrollBarVisibility="Never" Grid.Row="1" VerticalOptions="FillAndExpand">
+				<VerticalStackLayout>
+					<VerticalStackLayout Margin="0,0,0,20">
+						
+					<VerticalStackLayout.Effects>
+							<uranium:BlurEffect AccentOpacity="0.05" Mode="Light"/>
+						</VerticalStackLayout.Effects>
+						<Label Margin="0,40,0,20" Text="SHOPPING CART" VerticalOptions="Center" FontFamily="Battambang-Regular" FontAttributes="Bold" CharacterSpacing="1.6" TextColor="Navy" LineBreakMode="NoWrap" FontSize="28" HorizontalOptions="Center"/>
+						<HorizontalStackLayout  HorizontalOptions="Center">
+							<Label TextColor="Blue" VerticalOptions="Center" Text="&#xE7BF;" FontFamily="Segoe MDL2 Assets" FontSize="24" />
+							<Label x:Name="itemcount" FontAttributes="Bold" Text="" VerticalOptions="Center" FontFamily="Battambang-Regular" TextColor="Blue" LineBreakMode="NoWrap" FontSize="24" HorizontalOptions="Center"/>
+						</HorizontalStackLayout>
+						<VerticalStackLayout x:Name="cart_items"/>
+						<Image x:Name="empty" Margin="0,20,0,20" IsVisible="False" Source="cat.gif" HeightRequest="150" HorizontalOptions="Center"/>
+						<HorizontalStackLayout x:Name="reciepe" Margin="50,0,20,0">
+							<Label VerticalOptions="Center" Text="&#xE7BA;" TextColor="Red" FontFamily="Segoe MDL2 Assets" FontSize="36"/>
+							<Label Margin="20,20" WidthRequest="800" LineBreakMode="WordWrap" Text="Attention! Your cart contains prescription medication. Please remember to present your prescription upon order delivery." FontFamily="Battambang-Regular" TextColor="Red" FontSize="18"/>
+						</HorizontalStackLayout>
+						<Frame Margin="40,20,40,20" CornerRadius="20" Background="#40FFFFFF" x:Name = "receipt">
+							<VerticalStackLayout>
+								<Label HorizontalOptions="Center" Padding="0,0,0,0" FontAttributes="Bold" Text="How do you want to receive the order?" VerticalOptions="Center" FontFamily="Battambang-Regular" TextColor="Black" LineBreakMode="NoWrap" FontSize="24"/>
+								<material:RadioButtonGroupView HorizontalOptions="Center" Margin="20,10,20,10" Orientation="Horizontal">
+									<material:RadioButton FontFamily="Battambang-Regular" TextFontSize="14" ClassId="pickup" Margin="50" Text="Pickup" ScaleX="1.4" ScaleY="1.4" SelectedIconGeomerty="M 1425 -5111 C 1269 -5073 1157 -4882 1157 -4655 C 1158 -4401 1299 -4199 1477 -4199 C 1623 -4198 1741 -4314 1790 -4506 C 1874 -4834 1671 -5170 1425 -5111 Z M 2213 -4850 C 2165 -4839 2132 -4814 2100 -4764 C 2063 -4704 2046 -4633 2052 -4551 C 2071 -4289 2305 -4216 2409 -4440 C 2443 -4515 2444 -4640 2411 -4716 C 2370 -4811 2288 -4866 2213 -4850 Z M 2784 -4631 C 2712 -4587 2675 -4498 2682 -4386 C 2690 -4270 2749 -4184 2828 -4173 C 2884 -4165 2913 -4175 2951 -4212 C 2998 -4260 3022 -4321 3023 -4399 C 3025 -4580 2900 -4702 2784 -4631 Z M 3339 -4456 C 3286 -4420 3257 -4352 3257 -4265 C 3257 -4187 3277 -4135 3328 -4087 C 3425 -3995 3560 -4098 3560 -4265 C 3560 -4424 3441 -4527 3339 -4456 Z M 3790 -4151 C 3676 -4091 3653 -3870 3754 -3809 C 3795 -3784 3830 -3785 3871 -3813 C 3984 -3889 4000 -4088 3897 -4150 C 3857 -4175 3834 -4175 3790 -4151 Z M 2158 -3940 C 1972 -3908 1809 -3822 1682 -3685 C 1613 -3612 1564 -3523 1529 -3410 C 1494 -3299 1496 -3145 1534 -3035 C 1590 -2872 1704 -2744 1896 -2631 C 2151 -2480 2277 -2351 2381 -2135 C 2454 -1985 2481 -1875 2487 -1702 C 2494 -1532 2485 -1471 2424 -1248 C 2362 -1023 2346 -908 2353 -740 C 2363 -496 2431 -309 2558 -181 C 2634 -104 2690 -69 2793 -32 C 2854 -11 2883 -7 2985 -6 C 3090 -6 3114 -9 3183 -33 C 3559 -164 3730 -492 3817 -1245 C 3850 -1532 3835 -2860 3796 -3075 C 3743 -3369 3575 -3561 3240 -3710 C 3082 -3781 2676 -3908 2522 -3936 C 2439 -3950 2235 -3953 2158 -3940 Z">
+										<material:RadioButton.GestureRecognizers>
+											<TapGestureRecognizer Tapped="OnRadioButtonChosen"/>
+										</material:RadioButton.GestureRecognizers>
+									</material:RadioButton>
+									<material:RadioButton FontFamily="Battambang-Regular" TextFontSize="14" ClassId="standart" Margin="50" Text="Standart Delivery" ScaleX="1.4" ScaleY="1.4" SelectedIconGeomerty="M 1481 -4104 C 1350 -4069 1328 -4048 985 -3645 L 746 -3365 L 531 -3360 C 320 -3355 314 -3354 254 -3327 C 177 -3291 109 -3223 73 -3145 L 45 -3085 L 42 -2807 C 40 -2632 43 -2509 50 -2476 C 94 -2263 275 -2120 501 -2120 L 567 -2120 L 563 -2208 C 543 -2570 837 -2880 1200 -2880 C 1563 -2880 1857 -2570 1837 -2208 L 1833 -2120 L 2640 -2120 L 3447 -2120 L 3443 -2208 C 3423 -2570 3717 -2880 4080 -2880 C 4444 -2880 4737 -2570 4717 -2206 L 4712 -2117 L 4762 -2123 C 4880 -2137 4995 -2223 5047 -2334 L 5075 -2395 L 5075 -2660 L 5075 -2925 L 5049 -2980 C 5012 -3057 4962 -3111 4893 -3148 C 4840 -3176 4780 -3189 4337 -3270 L 3840 -3360 L 3432 -3698 C 3208 -3884 3005 -4048 2980 -4063 C 2883 -4119 2873 -4120 2175 -4119 C 1649 -4119 1525 -4116 1481 -4104 Z M 1762 -3872 L 1795 -3840 L 1795 -3635 L 1795 -3430 L 1762 -3398 L 1730 -3365 L 1430 -3362 C 1140 -3359 1130 -3360 1110 -3380 C 1099 -3391 1090 -3409 1090 -3420 C 1090 -3442 1435 -3853 1483 -3888 C 1513 -3910 1523 -3911 1622 -3908 C 1728 -3905 1730 -3905 1762 -3872 Z M 2851 -3880 C 2875 -3864 3008 -3761 3145 -3652 C 3365 -3478 3395 -3450 3398 -3423 C 3405 -3356 3435 -3359 2759 -3362 L 2150 -3365 L 2118 -3398 L 2085 -3430 L 2085 -3634 C 2085 -3838 2085 -3838 2110 -3865 C 2124 -3880 2144 -3896 2155 -3900 C 2166 -3905 2317 -3909 2491 -3909 L 2807 -3910 L 2851 -3880 Z M 2482 -3122 C 2510 -3094 2515 -3083 2515 -3040 C 2515 -2997 2510 -2986 2482 -2958 L 2450 -2925 L 2320 -2925 L 2190 -2925 L 2158 -2958 C 2130 -2986 2125 -2997 2125 -3039 C 2125 -3078 2130 -3094 2150 -3115 C 2188 -3156 2205 -3160 2332 -3157 L 2450 -3155 L 2482 -3122 Z M 1076 -2744 C 894 -2700 739 -2543 695 -2359 C 607 -1986 946 -1647 1319 -1735 C 1506 -1779 1661 -1934 1705 -2121 C 1746 -2297 1695 -2476 1565 -2605 C 1435 -2735 1253 -2787 1076 -2744 Z M 1274 -2468 C 1329 -2452 1412 -2369 1428 -2314 C 1456 -2220 1436 -2145 1365 -2075 C 1264 -1973 1136 -1973 1035 -2075 C 933 -2176 933 -2304 1035 -2405 C 1105 -2476 1180 -2495 1274 -2468 Z M 3956 -2744 C 3774 -2700 3619 -2543 3575 -2359 C 3487 -1986 3826 -1647 4199 -1735 C 4475 -1801 4650 -2083 4585 -2359 C 4519 -2636 4234 -2811 3956 -2744 Z M 4154 -2468 C 4240 -2442 4320 -2332 4320 -2240 C 4320 -2116 4204 -2000 4080 -2000 C 3956 -2000 3840 -2116 3840 -2240 C 3840 -2303 3863 -2354 3915 -2405 C 3985 -2476 4060 -2495 4154 -2468 Z">
+										<material:RadioButton.GestureRecognizers>
+											<TapGestureRecognizer Tapped="OnRadioButtonChosen"/>
+										</material:RadioButton.GestureRecognizers>
+									</material:RadioButton>
+									<material:RadioButton FontFamily="Battambang-Regular" TextFontSize="14" ClassId="speed" Margin="50" x:Name="startc" Text="Extra Speed Delivery" ScaleX="1.4" ScaleY="1.4" SelectedIconGeomerty="M 321 1164 H 441 L 710.28 683.94 H 1020 C 1020 683.94 1200 683.94 1200 600 C 1200 516 1020 516 1020 516 H 710.28 L 441 36 H 321 L 470.28 516 H 255.06 L 120 395.94 H 0 L 96.06 599.94 L 0 804 H 120 L 255.06 683.94 H 470.28 L 321 1164 Z">
+										<material:RadioButton.GestureRecognizers>
+											<TapGestureRecognizer Tapped="OnRadioButtonChosen"/>
+										</material:RadioButton.GestureRecognizers>
+									</material:RadioButton>
+								</material:RadioButtonGroupView>
+							</VerticalStackLayout>
+						</Frame>
+						<Grid Margin="80,20,80,20" x:Name="shipping">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition/>
+								<ColumnDefinition/>
+							</Grid.ColumnDefinitions>
+							<Label HorizontalOptions="Start" Grid.Column="0" FontAttributes="Bold" Text="Shipping Cost:" VerticalOptions="Center" FontFamily="Battambang-Regular" TextColor="#333333" LineBreakMode="NoWrap" FontSize="24"/>
+							<Label Grid.Column="1" x:Name="shippingcost" VerticalOptions="Center" FontFamily="Battambang-Regular" TextColor="Navy" FontAttributes="Bold" LineBreakMode="NoWrap" FontSize="24" HorizontalOptions="End"/>
+						</Grid>
+						<Grid Margin="80,20,80,20" x:Name="total">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition/>
+								<ColumnDefinition/>
+							</Grid.ColumnDefinitions>
+							<Label HorizontalOptions="Start" Grid.Column="0" FontAttributes="Bold" Text="Total:" VerticalOptions="Center" FontFamily="Battambang-Regular" TextColor="#333333" LineBreakMode="NoWrap" FontSize="24"/>
+							<Label Grid.Column="1" x:Name="total_price" VerticalOptions="Center" FontFamily="Battambang-Regular" TextColor="Black" FontAttributes="Bold" LineBreakMode="NoWrap" FontSize="24" HorizontalOptions="End"/>
+						</Grid>
+						<Label  Margin="80,20,80,0" HorizontalOptions="Start" Grid.Column="1" x:Name="contact" VerticalOptions="Center" Text="Almost there! Please leave us your phone number and we will call you in 15 minutes." FontFamily="Battambang-Regular" TextColor="#24694e" FontAttributes="Bold" LineBreakMode="WordWrap" FontSize="18"/>
+						<material:TextField  Margin="80,0,80,20"
+                    TitleColor="#24694e"
+                    TextColor="Black"
+                    WidthRequest="400"
+                    HorizontalOptions="Start"
+                    FontFamily="Battambang-Regular"
+                    x:Name="phone_entry"
+                    Title="Phone Number"
+                    Icon="{StaticResource PhoneIcon}"
+                    AccentColor="SeaGreen"
+					BorderColor="White">
+							<material:TextField.Attachments>
+								<Image x:Name="phone_invalid_image" Source="error.png" HeightRequest="20" IsVisible="False"/>
+							</material:TextField.Attachments>
+						</material:TextField>
+						<Label TextColor="Red" HorizontalOptions="Start"  Margin="100,0" FontFamily="Battambang-Regular" IsVisible="False" FontSize="12" x:Name="invalid_phone"></Label>
+						<Frame x:Name="confirm" CornerRadius="10" Margin="0,0,0,40" WidthRequest="400" BackgroundColor="#333333"  HorizontalOptions="Center">
+							<Label  Text="CONFIRM" FontSize="22" TextColor="White" FontFamily="Battambang-Regular" FontAttributes="Bold" VerticalOptions="Center">
+							</Label>
+							<Frame.GestureRecognizers>
+								<TapGestureRecognizer Tapped="OnTappedConfirm"/>
+							</Frame.GestureRecognizers>
+						</Frame>
+					</VerticalStackLayout>
+					<Border BackgroundColor="White" HeightRequest="100" Stroke="#917c00">
+						<Grid x:Name="footer">
+							<Grid.RowDefinitions>
+								<RowDefinition Height="Auto" />
+								<RowDefinition Height="*" />
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition />
+								<ColumnDefinition Width="75"/>
+								<ColumnDefinition />
+							</Grid.ColumnDefinitions>
+							<Label Grid.Row="0" Margin="40" Grid.Column="0" Text="PINEAPPLE" CharacterSpacing="1.6" TextColor="#917c00" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="End" />
+							<!-- Лого -->
+							<Image Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" WidthRequest="75" Source="logo.png" />
+							<!-- Название -->
+							<Label Grid.Row="0" Grid.Column="2" Margin="15" Text="PHARMA" CharacterSpacing="1.6" TextColor="#917c00" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="Start" />
+							<!-- Кнопки навигации -->
+						</Grid>
+					</Border>
+				</VerticalStackLayout>
+			</ScrollView>
+		</Grid>
+	</Grid>
+</ContentPage>

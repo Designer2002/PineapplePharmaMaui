@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+	xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             x:Class="winui_cooler.ItemPage"
+             NavigationPage.HasNavigationBar="False" 
+             NavigationPage.BackButtonTitle="">
+	<ContentPage.Background>
+		<LinearGradientBrush>
+			<GradientStopCollection>
+				<GradientStop Color="Beige" Offset="0.0"/>
+				<GradientStop Color="Transparent" Offset="0.5"/>
+				<GradientStop Color="LightPink" Offset="1.0"/>
+			</GradientStopCollection>
+		</LinearGradientBrush>
+	</ContentPage.Background>
+	<Grid>
+		<Image Source="itembg.jpg" Aspect="AspectFill" Opacity="0.25"/>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<!-- Верхнее навигационное меню -->
+			<Border BackgroundColor="White" Margin="0,20" Grid.Row="0" VerticalOptions="Start" HeightRequest="100" Stroke="#917c00">
+				<Grid x:Name="navbar">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="*" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="40" />
+					</Grid.ColumnDefinitions>
+					<Label Grid.Row="0" Margin="40" Grid.Column="0" Text="PINEAPPLE" CharacterSpacing="1.6" TextColor="#917c00" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="Start" />
+					<!-- Лого -->
+					<Image Grid.Row="0" Grid.Column="1" WidthRequest="75" Source="logo.png" />
+					<!-- Название -->
+					<Label Grid.Row="0" Grid.Column="2" Margin="15" Text="PHARMA" CharacterSpacing="1.6" TextColor="#917c00" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="Start" />
+					<!-- Кнопки навигации -->
+					<StackLayout Grid.Row="0" Grid.Column="2" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+						<Label Margin="10,0" Text="HOME" TextColor="#666666" FontSize="16" FontFamily="Battambang-Regular">
+							<Label.GestureRecognizers>
+								<TapGestureRecognizer Tapped="OnHomeTapped"/>
+							</Label.GestureRecognizers>
+						</Label>
+						<Label Margin="10,0" x:Name="news_btn" Text="NEWS" TextColor="#666666" FontSize="16" FontFamily="Battambang-Regular">
+							<Label.GestureRecognizers>
+								<TapGestureRecognizer Tapped="OnNewsLabelTapped"/>
+							</Label.GestureRecognizers>
+						</Label>
+						<Label Margin="10,0" x:Name="shop_btn" Text="SHOP" TextColor="#666666" FontSize="16" FontFamily="Battambang-Regular">
+							<Label.GestureRecognizers>
+								<TapGestureRecognizer Tapped="OnShopLabelTapped"/>
+							</Label.GestureRecognizers>
+						</Label>
+					</StackLayout>
+					<!-- Иконки -->
+					<Image Grid.Row="0" VerticalOptions="Center" Grid.Column="3" WidthRequest="30" Margin="10,0">
+						<Image.Source>
+							<FontImageSource FontFamily="Segoe MDL2 Assets" Color="#666666" Glyph="&#xE7BF;"/>
+						</Image.Source>
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="OnCartTapped"/>
+						</Image.GestureRecognizers>
+					</Image>
+					<Image Grid.Row="0" VerticalOptions="Center" Grid.Column="4" WidthRequest="30" Margin="10,0">
+						<Image.Source>
+							<FontImageSource FontFamily="Segoe MDL2 Assets" Color="#666666" Glyph="&#xE77B;"/>
+						</Image.Source>
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="OnPersonTapped"/>
+						</Image.GestureRecognizers>
+					</Image>
+					<Image Grid.Row="0" VerticalOptions="Center" Grid.Column="5" WidthRequest="30" Margin="10,0">
+						<Image.Source>
+							<FontImageSource FontFamily="Segoe MDL2 Assets" Color="#666666" Glyph="&#xF3B1;"/>
+						</Image.Source>
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="OnLogoutTapped"/>
+						</Image.GestureRecognizers>
+					</Image>
+				</Grid>
+			</Border>
+			<ScrollView VerticalScrollBarVisibility="Never" Grid.Row="1" VerticalOptions="FillAndExpand">
+				<VerticalStackLayout>
+					<VerticalStackLayout>
+						<VerticalStackLayout.Effects>
+							<uranium:BlurEffect Mode="Light"/>
+						</VerticalStackLayout.Effects>
+						<HorizontalStackLayout Margin="20,20">
+							<Label Margin="20,0" Text="Categories" TextColor="#666666" FontSize="18" FontFamily="Battambang-Regular">
+								<Label.GestureRecognizers>
+									<TapGestureRecognizer Tapped="OnShopLabelTapped"/>
+								</Label.GestureRecognizers>
+							</Label>
+							<Label Margin="10,0" Text=">>" TextColor="#666666" FontSize="18" FontFamily="Battambang-Regular"></Label>
+							<Label Margin="10,0" x:Name="catbrd" TextColor="#666666" FontSize="18" FontFamily="Battambang-Regular">
+								<Label.GestureRecognizers>
+									<TapGestureRecognizer Tapped="OnCatLabelTapped"/>
+								</Label.GestureRecognizers>
+							</Label>
+							<Label Margin="10,0" Text=">>" TextColor="#666666" FontSize="18" FontFamily="Battambang-Regular"></Label>
+							<Label Margin="10,0" x:Name="brdcrmb" TextColor="Black" FontAttributes="Bold" FontSize="18" FontFamily="Battambang-Regular"/>
+						</HorizontalStackLayout>
+						<Grid Margin="40,0,0,20">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="300"/>
+								<ColumnDefinition/>
+								<ColumnDefinition/>
+								<ColumnDefinition Width="50"/>
+							</Grid.ColumnDefinitions>
+							<Image x:Name="pic" VerticalOptions="Start" Margin="0,0,20,0" Grid.Column="0"/>
+							<VerticalStackLayout Margin="0,10" HorizontalOptions="Start" Grid.Column="1">
+								<Label VerticalOptions="Start" Margin="0,0,0,10" x:Name="title" FontFamily="Battambang-Regular" TextColor="Black" LineBreakMode="WordWrap" FontSize="26"/>
+								<HorizontalStackLayout>
+                                        <Label x:Name="prescription_icon" TextColor="Red" VerticalOptions="Center" Text="&#xF0E3;" FontFamily="Segoe MDL2 Assets" FontSize="24" />
+                                        <Label x:Name="prescription_text" Margin="10" VerticalOptions="Center" FontFamily="Battambang-Regular" TextColor="Red" Text="Prescription Required" FontSize="20"/>
+                                    </HorizontalStackLayout>
+								<Label VerticalOptions="Start" Margin="0,10" x:Name="price" FontFamily="Battambang-Regular" TextColor="#666666" LineBreakMode="WordWrap" FontSize="22"/>
+								<ContentView x:Name="buybtn" Padding="10,10,10,10" BackgroundColor="DarkCyan" Margin="0,90" HeightRequest="75">
+									<HorizontalStackLayout HorizontalOptions="Center">
+                                        <Label TextColor="White" VerticalOptions="Center" Text="&#xE7BF;" FontFamily="Segoe MDL2 Assets" FontSize="24" />
+                                        <Label Margin="10" VerticalOptions="Center" FontFamily="Battambang-Regular" TextColor="White" Text="BUY" FontSize="20"/>
+                                    </HorizontalStackLayout>
+                                    <ContentView.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnBuyTapped"/>
+                                    </ContentView.GestureRecognizers>
+                                </ContentView>
+							</VerticalStackLayout>
+							<material:TabView Grid.Column="2">
+                                <material:TabView.TabHeaderItemTemplate>
+                                    <DataTemplate>
+                                        <Button 
+                                            Text="{Binding Title}"
+                                            Command="{Binding Command}"
+											FontSize="24"
+											FontFamily="Battambang-Regular">
+                                            <Button.Triggers>
+                                                <DataTrigger TargetType="Button" Binding="{Binding IsSelected}" Value="False">
+                                                    <Setter Property="BackgroundColor" Value="SaddleBrown" />
+                                                    <Setter Property="TextColor" Value="Yellow" />
+                                                    <Setter Property="ImageSource" Value="{FontImageSource Color=White, Glyph=&#xE946;, FontFamily=Segoe MDL2 Assets, Size=24}" />
+                                                </DataTrigger>
+                                                <DataTrigger TargetType="Button" Binding="{Binding IsSelected}" Value="True">
+                                                    <Setter Property="BackgroundColor" Value="LightPink" />
+                                                    <Setter Property="TextColor" Value="LightYellow" />
+                                                    <Setter Property="ImageSource" Value="{FontImageSource Color=White, Glyph=&#xF167;, FontFamily=Segoe MDL2 Assets, Size=24}" />
+                                            </DataTrigger>
+                                            </Button.Triggers>
+                                        </Button>
+                                    </DataTemplate>
+                                </material:TabView.TabHeaderItemTemplate>
+                                <material:TabItem Title="Description">
+                                    <material:TabItem.ContentTemplate>
+                                        <DataTemplate>
+											<StackLayout Margin="0,20">
+												<Label FontFamily = "Battambang-Regular" LineBreakMode="WordWrap" Text = "{Binding Description}" FontSize = "20"/>
+											</StackLayout>
+										</DataTemplate>
+                                    </material:TabItem.ContentTemplate>
+                                </material:TabItem>
+                                <material:TabItem Title="Characteristics">
+                                    <material:TabItem.ContentTemplate>
+                                        <DataTemplate>
+                                            <StackLayout WidthRequest="400" HorizontalOptions="Start" Orientation="Vertical">
+												<Grid Margin="0,20">
+													<Grid.ColumnDefinitions>
+														<ColumnDefinition Width="150"/>
+														<ColumnDefinition/>
+														<ColumnDefinition Width="150"/>
+													</Grid.ColumnDefinitions>
+													<Label HorizontalOptions="Start" Grid.Column="0" FontFamily = "Battambang-Regular" LineBreakMode="WordWrap" Text = "Active Component:" FontSize = "20"/>
+													<Label HorizontalOptions="End" Grid.Column="2" FontFamily = "Battambang-Regular" TextColor="DarkCyan" FontAttributes="Bold" LineBreakMode="WordWrap" Text = "{Binding ActiveComponent}" FontSize = "20"/>
+												</Grid>
+												<Grid Margin="0">
+													<Grid.ColumnDefinitions>
+														<ColumnDefinition Width="200"/>
+														<ColumnDefinition/>
+														<ColumnDefinition Width="200"/>
+													</Grid.ColumnDefinitions>
+													<Label HorizontalOptions="Start" Grid.Column="0" FontFamily = "Battambang-Regular" LineBreakMode="WordWrap" Text = "Release Form:" FontSize = "20"/>
+													<Label HorizontalOptions="End" Grid.Column="2" FontFamily = "Battambang-Regular" TextColor="DarkCyan" FontAttributes="Bold" LineBreakMode="WordWrap" Text = "{Binding ReleaseForm}" FontSize = "20"/>
+												</Grid>
+												<Grid Margin="0,5">
+													<Grid.ColumnDefinitions>
+														<ColumnDefinition Width="200"/>
+														<ColumnDefinition/>
+														<ColumnDefinition Width="200"/>
+													</Grid.ColumnDefinitions>
+													<Label HorizontalOptions="Start" Grid.Column="0" FontFamily = "Battambang-Regular" LineBreakMode="WordWrap" Text = "Distributed By:" FontSize = "20"/>
+													<Label HorizontalOptions="End" Grid.Column="2" FontFamily = "Battambang-Regular" TextColor="DarkCyan" FontAttributes="Bold" LineBreakMode="WordWrap" Text = "{Binding Distributer}" FontSize = "20"/>
+												</Grid>
+												<Grid Margin="0,5">
+													<Grid.ColumnDefinitions>
+														<ColumnDefinition Width="200"/>
+														<ColumnDefinition/>
+														<ColumnDefinition Width="200"/>
+													</Grid.ColumnDefinitions>
+													<Label HorizontalOptions="Start" Grid.Column="0" FontFamily = "Battambang-Regular" LineBreakMode="WordWrap" Text = "Expiration Date:" FontSize = "20"/>
+													<Label HorizontalOptions="End" Grid.Column="2" FontFamily = "Battambang-Regular" TextColor="DarkCyan" FontAttributes="Bold" LineBreakMode="WordWrap" Text = "{Binding ExpirationDate}" FontSize = "20"/>
+												</Grid>
+											</StackLayout>
+                                        </DataTemplate>
+                                    </material:TabItem.ContentTemplate>
+                                </material:TabItem>
+                            </material:TabView>
+						</Grid>
+					</VerticalStackLayout>
+					<VerticalStackLayout>
+						<VerticalStackLayout.Effects>
+							<uranium:BlurEffect AccentColor="Blue" AccentOpacity="0.04"/>
+						</VerticalStackLayout.Effects>
+						<Label Margin="0,40,0,20" Text="YOU MAY ALSO LIKE:" VerticalOptions="Center" FontFamily="Battambang-Regular" FontAttributes="Bold" CharacterSpacing="1.6" TextColor="SaddleBrown" LineBreakMode="NoWrap" FontSize="28" HorizontalOptions="Center"/>
+						<Grid Margin="0,20,0,0">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition/>
+								<ColumnDefinition/>
+								<ColumnDefinition/>
+								<ColumnDefinition/>
+								<ColumnDefinition/>
+							</Grid.ColumnDefinitions>
+							<VerticalStackLayout Grid.Column="0">
+								<Image x:Name="also_pic1" HeightRequest="170" Margin="10" Aspect="AspectFit" />
+								<Label x:Name="also_text1" FontFamily="Battambang-Regular" FontSize="18" FontAttributes="Bold" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" Margin="10,-10" />
+                                <Label x:Name="also_price1" Margin="0,0,0,20" HorizontalOptions="Center" FontSize="14" FontFamily="Battambang-Regular" TextColor="#333333"/>
+							</VerticalStackLayout>
+							<VerticalStackLayout Grid.Column="1">
+								<Image x:Name="also_pic2" HeightRequest="170" Margin="10" Aspect="AspectFit" />
+								<Label x:Name="also_text2" FontFamily="Battambang-Regular" FontSize="18" FontAttributes="Bold" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" Margin="10,-10" />
+                                <Label x:Name="also_price2" Margin="0,0,0,20" HorizontalOptions="Center" FontSize="14" FontFamily="Battambang-Regular" TextColor="#333333"/>
+							</VerticalStackLayout>
+							<VerticalStackLayout Grid.Column="2">
+								<Image x:Name="also_pic3" HeightRequest="170" Margin="10" Aspect="AspectFit" />
+								<Label x:Name="also_text3" FontFamily="Battambang-Regular" FontSize="18" FontAttributes="Bold" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" Margin="10,-10" />
+                                <Label x:Name="also_price3" Margin="0,0,0,20" HorizontalOptions="Center" FontSize="14" FontFamily="Battambang-Regular" TextColor="#333333"/>
+							</VerticalStackLayout>
+							<VerticalStackLayout Grid.Column="3">
+								<Image x:Name="also_pic4" HeightRequest="170" Margin="10" Aspect="AspectFit" />
+								<Label x:Name="also_text4" FontFamily="Battambang-Regular" FontSize="18" FontAttributes="Bold" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" Margin="10,-10" />
+                                <Label x:Name="also_price4" Margin="0,0,0,20" HorizontalOptions="Center" FontSize="14" FontFamily="Battambang-Regular" TextColor="#333333"/>
+							</VerticalStackLayout>
+							<VerticalStackLayout Grid.Column="4">
+								<Image x:Name="also_pic5" HeightRequest="170" Margin="10" Aspect="AspectFit" />
+								<Label x:Name="also_text5" FontFamily="Battambang-Regular" FontSize="18" FontAttributes="Bold" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" Margin="10,-10" />
+                                <Label x:Name="also_price5" Margin="0,0,0,20" HorizontalOptions="Center" FontSize="14" FontFamily="Battambang-Regular" TextColor="#333333"/>
+							</VerticalStackLayout>
+						</Grid>
+					</VerticalStackLayout>
+					<Border BackgroundColor="White" HeightRequest="100" Stroke="#917c00">
+						<Grid x:Name="footer">
+							<Grid.RowDefinitions>
+								<RowDefinition Height="Auto" />
+								<RowDefinition Height="*" />
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition />
+								<ColumnDefinition Width="75"/>
+								<ColumnDefinition />
+							</Grid.ColumnDefinitions>
+							<Label Grid.Row="0" Margin="40" Grid.Column="0" Text="PINEAPPLE" CharacterSpacing="1.6" TextColor="#917c00" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="End" />
+							<!-- Лого -->
+							<Image Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" WidthRequest="75" Source="logo.png" />
+							<!-- Название -->
+							<Label Grid.Row="0" Grid.Column="2" Margin="15" Text="PHARMA" CharacterSpacing="1.6" TextColor="#917c00" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="Start" />
+							<!-- Кнопки навигации -->
+						</Grid>
+					</Border>
+				</VerticalStackLayout>
+			</ScrollView>
+		</Grid>
+	</Grid>
+</ContentPage>

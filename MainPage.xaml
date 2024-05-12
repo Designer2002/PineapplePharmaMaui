@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+             x:Class="winui_cooler.MainPage"
+             NavigationPage.HasNavigationBar="False" 
+             NavigationPage.BackButtonTitle="">
+	<Grid>
+		<Image Source="gold.jpg" Aspect="AspectFill" Opacity="0.4"/>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<!-- Верхнее навигационное меню -->
+			<Border BackgroundColor="White" Margin="0,20" Grid.Row="0" VerticalOptions="Start" HeightRequest="100" Stroke="#917c00">
+				<Grid x:Name="navbar">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="*" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="40" />
+					</Grid.ColumnDefinitions>
+					<Label Grid.Row="0" Margin="40" Grid.Column="0" Text="PINEAPPLE" CharacterSpacing="1.6" TextColor="#917c00" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="Start" />
+					<!-- Лого -->
+					<Image Grid.Row="0" Grid.Column="1" WidthRequest="75" Source="logo.png" />
+					<!-- Название -->
+					<Label Grid.Row="0" Grid.Column="2" Margin="15" Text="PHARMA" CharacterSpacing="1.6" TextColor="#917c00" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="Start" />
+					<!-- Кнопки навигации -->
+					<StackLayout Grid.Row="0" Grid.Column="2" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+						<Label Margin="10,0" Text="HOME" TextColor="#666666" FontSize="16" FontFamily="Battambang-Regular">
+							<Label.GestureRecognizers>
+								<TapGestureRecognizer Tapped="OnHomeLabelTapped"/>
+							</Label.GestureRecognizers>
+						</Label>
+						<Label Margin="10,0" x:Name="news_btn" Text="NEWS" TextColor="#666666" FontSize="16" FontFamily="Battambang-Regular">
+							<Label.GestureRecognizers>
+								<TapGestureRecognizer Tapped="OnNewsLabelTapped"/>
+							</Label.GestureRecognizers>
+						</Label>
+						<Label Margin="10,0" x:Name="shop_btn" Text="SHOP" TextColor="#666666" FontSize="16" FontFamily="Battambang-Regular">
+							<Label.GestureRecognizers>
+								<TapGestureRecognizer Tapped="OnShopLabelTapped"/>
+							</Label.GestureRecognizers>
+						</Label>
+					</StackLayout>
+					<!-- Иконки -->
+					<Image Grid.Row="0" VerticalOptions="Center" Grid.Column="3" WidthRequest="30" Margin="10,0">
+						<Image.Source>
+							<FontImageSource FontFamily="Segoe MDL2 Assets" Color="#666666" Glyph="&#xE7BF;"/>
+						</Image.Source>
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="OnCartTapped"/>
+						</Image.GestureRecognizers>
+					</Image>
+					<Image Grid.Row="0" VerticalOptions="Center" Grid.Column="4" WidthRequest="30" Margin="10,0">
+						<Image.Source>
+							<FontImageSource FontFamily="Segoe MDL2 Assets" Color="#666666" Glyph="&#xE77B;"/>
+						</Image.Source>
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="OnPersonTapped"/>
+						</Image.GestureRecognizers>
+					</Image>
+					<Image Grid.Row="0" VerticalOptions="Center" Grid.Column="5" WidthRequest="30" Margin="10,0">
+						<Image.Source>
+							<FontImageSource FontFamily="Segoe MDL2 Assets" Color="#666666" Glyph="&#xF3B1;"/>
+						</Image.Source>
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="OnLogoutTapped"/>
+						</Image.GestureRecognizers>
+					</Image>
+				</Grid>
+			</Border>
+			<!-- Остальное содержимое -->
+			<ScrollView x:Name="scroll" VerticalScrollBarVisibility="Never" Grid.Row="1" VerticalOptions="FillAndExpand">
+				<VerticalStackLayout>
+					<VerticalStackLayout x:Name="covid" HeightRequest="450" Padding="0,10">
+						<VerticalStackLayout.Effects>
+							<uranium:BlurEffect AccentColor="Magenta" AccentOpacity="0.04"/>
+						</VerticalStackLayout.Effects>
+						<Grid WidthRequest="950">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition/>
+								<ColumnDefinition Width="500"/>
+							</Grid.ColumnDefinitions>
+							<Grid WidthRequest="390" HorizontalOptions="End" Grid.Column="0">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition />
+									<ColumnDefinition />
+								</Grid.ColumnDefinitions>
+								<Grid.RowDefinitions>
+									<RowDefinition Height="70"/>
+									<RowDefinition Height="Auto"/>
+									<RowDefinition Height="Auto"/>
+								</Grid.RowDefinitions>
+								<VerticalStackLayout Grid.Row="0" Grid.ColumnSpan="2">
+									<Label FontFamily="Battambang-Regular" FontAttributes="Bold" CharacterSpacing="1.6" TextColor="LightYellow" LineBreakMode="NoWrap" Text="COVID-19 STATS" FontSize="28" HorizontalOptions="Center"/>
+									<Label FontFamily="Battambang-Regular" TextColor="#666666" Text="Know your enemy!" Margin="0,-5" CharacterSpacing="-0.4" LineBreakMode="NoWrap" FontSize="16" HorizontalOptions="Center"/>
+								</VerticalStackLayout>
+								<Border Margin="10,10,10,10" Background="White" Grid.Row="1" Padding="10" Stroke="Maroon">
+									<Border.StrokeShape>
+										<RoundRectangle CornerRadius="10" StrokeThickness="2" />
+									</Border.StrokeShape>
+									<VerticalStackLayout Padding="0,10,0,0" Grid.Row="0" Grid.Column="0">
+										<Image Margin="5,0,5,0" Source="heartrate.png" WidthRequest="50"/>
+										<Label  Text="Recovered" FontFamily="Battambang-Regular" FontSize="16" TextColor="#333333" HorizontalOptions="Center" VerticalOptions="Center"/>
+										<Label Margin="0,0,0,10" CharacterSpacing="1.5" Text="123" FontSize="20" x:Name="l1" FontFamily="Battambang-Regular" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+									</VerticalStackLayout>
+								</Border>
+								<Border Margin="10,10,10,10" Background="White" Grid.Row="1" Grid.Column="1" Padding="10" Stroke="#666666">
+									<Border.StrokeShape>
+										<RoundRectangle CornerRadius="10" StrokeThickness="2" />
+									</Border.StrokeShape>
+									<VerticalStackLayout Padding="0,10,0,0" Grid.Row="0" Grid.Column="0">
+										<Image Margin="5,0,5,0" Source="grave.png" WidthRequest="50"/>
+										<Label  Text="Deaths" FontFamily="Battambang-Regular" FontSize="16" TextColor="#333333" HorizontalOptions="Center" VerticalOptions="Center"/>
+										<Label Margin="0,0,0,10" CharacterSpacing="1.5" Text="123" FontSize="20" x:Name="l2" FontFamily="Battambang-Regular" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+									</VerticalStackLayout>
+								</Border>
+								<Border Margin="10,10,10,10" Background="White" Grid.Row="2" Padding="10" Stroke="Green">
+									<Border.StrokeShape>
+										<RoundRectangle CornerRadius="10" StrokeThickness="2" />
+									</Border.StrokeShape>
+									<VerticalStackLayout Padding="0,10,0,0" Grid.Row="0" Grid.Column="0">
+										<Image Margin="5,0,5,0" Source="virus.png" WidthRequest="50"/>
+										<Label  Text="Active Patients" FontFamily="Battambang-Regular" FontSize="16" TextColor="#333333" HorizontalOptions="Center" VerticalOptions="Center"/>
+										<Label Margin="0,0,0,10" CharacterSpacing="1.5" Text="123" FontSize="20" x:Name="l3" FontFamily="Battambang-Regular" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+									</VerticalStackLayout>
+								</Border>
+								<Border Margin="10,10,10,10" Background="White" Grid.Row="2" Grid.Column="2" Padding="10" Stroke="Orange">
+									<Border.StrokeShape>
+										<RoundRectangle CornerRadius="10" StrokeThickness="2" />
+									</Border.StrokeShape>
+									<VerticalStackLayout Padding="0,10,0,0" Grid.Row="0" Grid.Column="0">
+										<Image Margin="5,0,5,0" Source="ambulance.png" WidthRequest="50"/>
+										<Label  Text="Infected Today" FontFamily="Battambang-Regular" FontSize="16" TextColor="#333333" HorizontalOptions="Center" VerticalOptions="Center"/>
+										<Label Margin="0,0,0,10" CharacterSpacing="1.5" Text="123" FontSize="20" x:Name="l4" FontFamily="Battambang-Regular" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+									</VerticalStackLayout>
+								</Border>
+							</Grid>
+							<Image Grid.Column="1" HorizontalOptions="Start" Aspect="AspectFill" Source="mask.jpeg"/>
+						</Grid>
+					</VerticalStackLayout>
+					<VerticalStackLayout Margin="0,100,0,10" Padding="0,10" HeightRequest="570">
+						<VerticalStackLayout.Effects>
+							<uranium:BlurEffect AccentColor="GreenYellow" AccentOpacity="0.12"/>
+						</VerticalStackLayout.Effects>
+						<Label Margin="0,20,0,20" Text="TRENDING PRODUCTS" VerticalOptions="Center" FontFamily="Battambang-Regular" FontAttributes="Bold" CharacterSpacing="1.6" TextColor="#917c00" LineBreakMode="NoWrap" FontSize="28" HorizontalOptions="Center"/>
+						<CarouselView HorizontalScrollBarVisibility="Never" x:Name="carousel" ItemsSource="{Binding TrendingMedicine}">
+							<CarouselView.ItemTemplate>
+								<DataTemplate>
+									<Grid WidthRequest="1100">
+										<Grid.ColumnDefinitions>
+											<ColumnDefinition/>
+											<ColumnDefinition/>
+											<ColumnDefinition/>
+										</Grid.ColumnDefinitions>
+										<!-- Первая карточка -->
+										<Frame HeightRequest="370" CornerRadius="10" Grid.Column="0" Margin="0,10,0,10">
+											<VerticalStackLayout HeightRequest="350">
+												<Image Source="med1.jpg" HeightRequest="270" Margin="10" Aspect="AspectFit" />
+												<Label Text="{Binding Name}" FontFamily="Battambang-Regular" FontSize="20" FontAttributes="Bold" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" Margin="10,-10" />
+												<Label Text="$10.99" FontSize="16" FontFamily="Battambang-Regular" TextColor="Gray" VerticalOptions="Center" HorizontalOptions="Center" Margin="10,0,0,20" />
+											</VerticalStackLayout>
+										</Frame>
+										<Frame HeightRequest="370" CornerRadius="10" Grid.Column="1" Margin="10,10,10,10">
+											<VerticalStackLayout HeightRequest="350">
+												<Image Source="med2.jpg" HeightRequest="270" Margin="10" Aspect="AspectFit" />
+												<Label Text="{Binding Name}" FontFamily="Battambang-Regular" FontSize="20" FontAttributes="Bold" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" Margin="10,-10" />
+												<HorizontalStackLayout Margin="10,0,0,20"  VerticalOptions="Center" HorizontalOptions="Center">
+                                                    <Label Text="$100.99" FontSize="16" FontFamily="Battambang-Regular" TextColor="Red" TextDecorations="Strikethrough" />
+                                                    <Label Text="{Binding Price}" FontSize="16" FontFamily="Battambang-Regular" TextColor="Gray"/>
+                                                </HorizontalStackLayout>
+											</VerticalStackLayout>
+										</Frame>
+										<Frame HeightRequest="370" CornerRadius="10" Grid.Column="2" Margin="20,10,0,10">
+											<VerticalStackLayout HeightRequest="350">
+												<Image Source="med3.jpg" HeightRequest="270" Margin="10" Aspect="AspectFit" />
+												<Label Text="{Binding Name}" FontFamily="Battambang-Regular" FontSize="20" FontAttributes="Bold" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" Margin="10,-10" />
+												<Label Text="{Binding Price}" FontSize="16" FontFamily="Battambang-Regular" TextColor="Gray" VerticalOptions="Center" HorizontalOptions="Center" Margin="10,0,0,20" />
+											</VerticalStackLayout>
+										</Frame>
+									</Grid>
+								</DataTemplate>
+							</CarouselView.ItemTemplate>
+						</CarouselView>
+						<Label x:Name="more_btn" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0" Text="More..." TextColor="#666666" FontSize="20" FontFamily="Battambang-Regular">
+							<Label.GestureRecognizers>
+								<TapGestureRecognizer Tapped="OnLabelTapped"/>
+							</Label.GestureRecognizers>
+						</Label>
+					</VerticalStackLayout>
+                    <VerticalStackLayout Margin="0,100,0,0">
+                        <VerticalStackLayout.Effects>
+							<uranium:BlurEffect AccentColor="Blue" AccentOpacity="0.04"/>
+						</VerticalStackLayout.Effects>
+						<Label Margin="0,40,0,20" Text="PICK UP YOUR OWN KIT!" VerticalOptions="Center" FontFamily="Battambang-Regular" FontAttributes="Bold" CharacterSpacing="1.6" TextColor="LightYellow" LineBreakMode="NoWrap" FontSize="28" HorizontalOptions="Center"/>
+                        <Grid Margin="0,0,0,40">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="450"/>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <VerticalStackLayout Grid.Column="1">
+                                <Label Text="Here's an offer!" FontFamily="Battambang-Regular" FontSize="24" FontAttributes="Bold" TextColor="White" />
+                                <Label Text="Collect a kit! Stay healthy and protected with our special offer! Purchase our comprehensive medical kit containing five essential items and receive a fantastic 15% discount. As a bonus, we're including a high-quality mask, absolutely free, to safeguard you against COVID-19 and other airborne threats. With this kit, you'll have everything you need to prioritize your well-being and protect yourself and your loved ones. Don't miss out on this opportunity to invest in your health and safety while enjoying great savings. Upgrade your health arsenal today and embrace a healthier, safer tomorrow!" FontSize="16" CharacterSpacing="-0.4" FontFamily="Battambang-Regular" TextColor="LightGray"/>
+                            </VerticalStackLayout>
+                            <Image HeightRequest="400" Source="kit.jpg" Grid.Column="3"/>
+                        </Grid>
+                    </VerticalStackLayout>
+                     <VerticalStackLayout x:Name="news" Margin="0,100,0,0">
+                        <VerticalStackLayout.Effects>
+							<uranium:BlurEffect AccentColor="GreenYellow" AccentOpacity="0.12"/>
+						</VerticalStackLayout.Effects>
+                        <Label Margin="0,20,0,20" Text="RECENT NEWS" VerticalOptions="Center" FontFamily="Battambang-Regular" FontAttributes="Bold" CharacterSpacing="1.6" TextColor="#917c00" LineBreakMode="NoWrap" FontSize="28" HorizontalOptions="Center"/>
+                        <Grid Background="#40FFFFFF">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="500"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="50"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="1" Text="Unlocking Nature's Healing: The Remarkable Health Benefits of Psilocybin Mushrooms" Grid.ColumnSpan="2" FontFamily="Battambang-Regular" TextColor="Black" FontSize="22" HorizontalOptions="Center"/>
+                            <Image Grid.Row="1" Source="mush.jpg" Grid.Column="1"/>
+                            <Label Grid.Row="1" Text="Explore the profound therapeutic potential of psilocybin mushrooms, from alleviating depression and anxiety to promoting profound spiritual experiences. Scientists and therapists are embracing this natural remedy with cautious optimism, revolutionizing mental health treatments." Grid.Column="2" FontFamily="Battambang-Regular" TextColor="#333333" FontSize="18" Margin="40,20,40,20" CharacterSpacing="-0.4" />
+                            <Label Grid.Row="2" HorizontalOptions="Center" Grid.Column="2" Margin="0,0" Text="More..." TextColor="#666666" FontSize="18" FontFamily="Battambang-Regular">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnLabelTapped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Grid>
+                         
+                         <Grid Margin="0,30,0,0" Background="#40FFFFFF">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="500"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="50"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="1" Text="A Thrilling Route to Better Health: Discover the Surprising Health Benefits That Skateboarding Offers!" Grid.ColumnSpan="2" FontFamily="Battambang-Regular" TextColor="Black" FontSize="22" HorizontalOptions="Center"/>
+                            <Image Grid.Row="1" Source="skate.jpg" Grid.Column="1"/>
+                            <Label Grid.Row="1" Text="In this article, delve into the unexpected ways skateboarding contributes to physical and mental well-being, from improving balance and coordination to boosting mood and confidence. Explore how this exhilarating activity transcends its stereotype to emerge as a holistic form of exercise and self-expression, appealing to people of all ages and backgrounds." Grid.Column="2" FontFamily="Battambang-Regular" TextColor="#333333" FontSize="18" Margin="40,20,40,20" CharacterSpacing="-0.4" />
+                            <Label Grid.Row="2" HorizontalOptions="Center" Grid.Column="2" Margin="0,0" Text="More..." TextColor="#666666" FontSize="18" FontFamily="Battambang-Regular">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnLabelTapped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Grid>
+                         
+                        <Grid Margin="0,30,0,0" Background="#40FFFFFF">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="500"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="50"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="1" Text="Revolutionizing Healthcare: Unveiling the Transformative Impact of Artificial Intelligence in Healthcare!" Grid.ColumnSpan="2" FontFamily="Battambang-Regular" TextColor="Black" FontSize="22" HorizontalOptions="Center"/>
+                            <Image Grid.Row="1" Source="hologram.jpg" Grid.Column="1"/>
+                            <Label Grid.Row="1" Text="Embark on a journey through the cutting-edge realm of AI in medicine, where innovative technologies are reshaping diagnostics, treatment plans, and patient care. From predictive analytics and personalized medicine to streamlining administrative tasks, AI is revolutionizing every facet of healthcare delivery. Explore the promise and challenges of this rapidly evolving field as it strives to enhance efficiency, accuracy, and accessibility in healthcare systems worldwide." Grid.Column="2" FontFamily="Battambang-Regular" TextColor="#333333" FontSize="18" Margin="40,20,40,20" CharacterSpacing="-0.4" />
+                            <Label Grid.Row="2" HorizontalOptions="Center" Grid.Column="2" Margin="0,0" Text="More..." TextColor="#666666" FontSize="18" FontFamily="Battambang-Regular">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnLabelTapped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Grid>
+                    </VerticalStackLayout>
+                    <Border BackgroundColor="White" HeightRequest="100" Stroke="#917c00">
+                        <Grid x:Name="footer">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="75"/>
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Margin="40" Grid.Column="0" Text="PINEAPPLE" CharacterSpacing="1.6" TextColor="#917c00" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="End" />
+                            <!-- Лого -->
+                            <Image Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" WidthRequest="75" Source="logo.png" />
+                            <!-- Название -->
+                            <Label Grid.Row="0" Grid.Column="2" Margin="15" Text="PHARMA" CharacterSpacing="1.6" TextColor="#917c00" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="Start" />
+                            <!-- Кнопки навигации -->
+                        </Grid>
+                    </Border>
+                </VerticalStackLayout>
+			</ScrollView>
+		</Grid>
+	</Grid>
+</ContentPage>

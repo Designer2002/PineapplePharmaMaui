@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             xmlns:m="clr-namespace:UraniumUI.Icons.MaterialIcons;assembly=UraniumUI.Icons.MaterialIcons"
+             xmlns:fa="clr-namespace:UraniumUI.Icons.FontAwesome;assembly=UraniumUI.Icons.FontAwesome"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+             x:Class="winui_cooler.StartPage"
+             NavigationPage.HasNavigationBar="False" 
+             NavigationPage.BackButtonTitle="">
+    <ContentPage.Resources>
+        <FontImageSource x:Key="LockIcon" Color="Black" FontFamily="Segoe MDL2 Assets" Glyph="&#xE1F7;" />
+        <FontImageSource x:Key="EmailIcon" Color="Black" FontFamily="Segoe MDL2 Assets" Glyph="&#xE715;" />
+    </ContentPage.Resources>
+    <Grid x:Name="grd">
+        <Image  Aspect="AspectFill" Source="login_bg.jpg" MinimumHeightRequest="768"/>
+        <VerticalStackLayout WidthRequest="600" HorizontalOptions="Center" MinimumHeightRequest="968">
+            <VerticalStackLayout.Effects>
+                <uranium:BlurEffect AccentColor="White" AccentOpacity="0.84"/>
+            </VerticalStackLayout.Effects>
+            <Image HorizontalOptions="Center" Source="logo.png" MaximumHeightRequest="100" Margin="0, 20, 0, 0"/>
+            <Label FontFamily="Battambang-Regular" Text="Login To Your Account" FontSize="22" HorizontalOptions="Center"/>
+            <Label FontFamily="Battambang-Regular" TextColor="#80741f" Text="Explore a new world of our goods!" FontSize="14" HorizontalOptions="Center"/>
+            <Border Stroke="Gray" HeightRequest="50"  MaximumWidthRequest="400" Background="White" HorizontalOptions="Center" >
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+                <Grid x:Name="gogle" Padding="0,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="g_logo"  MinimumHeightRequest="40" MinimumWidthRequest="40" Grid.Column="0"/>
+                    <Label Padding="5,5,5,5" Grid.Column="1" x:Name="gogle_text" HorizontalOptions="Start" VerticalOptions="Center" FontFamily="Battambang-Regular" TextColor="#666666" Text="Continue with Google" FontSize="16"/>
+                </Grid>
+            </Border>
+            <Label HorizontalOptions="Center" TextColor="Gray" FontFamily="Battambang-Regular" Margin="0,40,0,40" FontSize="11" Text="------------- or Sign in with Email ------------- "></Label>
+             <material:TextField
+                BorderColor="Black"
+                TitleColor="Black"
+                HeightRequest="50"
+                Margin="0,0,0,20"
+                WidthRequest="400"
+                HorizontalOptions="Center"
+                FontFamily="Battambang-Regular"
+                x:Name="email_entry"
+                Title="Email"
+                Icon="{StaticResource EmailIcon}"
+                AccentColor="Orange"/>
+            <material:TextField
+                BorderColor="Black"
+                HeightRequest="50"
+                TitleColor="Black"
+                Margin="0,0,0,20"
+                TextColor="#917c00"
+                WidthRequest="400"
+                HorizontalOptions="Center"
+                FontFamily="Battambang-Regular"
+                x:Name="password_entry"
+                Title="Password"
+                IsPassword="True"
+                Icon="{StaticResource LockIcon}"
+                AccentColor="#917c00">
+                <material:TextField.Attachments>
+                    <material:TextFieldPasswordShowHideAttachment />
+                </material:TextField.Attachments>
+            </material:TextField>
+            <Grid WidthRequest="400">
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="170"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="170"/>
+                </Grid.ColumnDefinitions>
+                <CheckBox Grid.Column="0" Color="#917c00"/>
+                <Label VerticalOptions="Center" Text="Remember Me" FontFamily="Battambang-Regular" TextColor="Black" Grid.Column="1" HorizontalOptions="Start"/>
+                <ContentView VerticalOptions="Center" Grid.Column="3" BackgroundColor="Transparent" HorizontalOptions="End" x:Name="forgot_btn">
+                    <Label Text="Forgot Password?" FontFamily="Battambang-Regular" TextColor="#917c00"/>
+                    <ContentView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ForgotOnTapGestureRecognizerTapped"/>
+                    </ContentView.GestureRecognizers>
+                </ContentView>
+            </Grid>
+            <Border Stroke="Transparent" WidthRequest="200" Margin="0,30,0,0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+                <ContentView Padding="10,10,10,10" x:Name="login_btn" BackgroundColor="#917c00">
+                    <Label TextColor="White" HorizontalOptions="Center" Text="Login"  FontFamily="Battambang-Regular"/>
+                    <ContentView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="LoginOnTapGestureRecognizerTapped"/>
+                    </ContentView.GestureRecognizers>
+                </ContentView>
+            </Border>
+            <Grid Margin="0,60,0,0" WidthRequest="300">
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Not Registered Yet?" FontFamily="Battambang-Regular" TextColor="Black" Grid.Column="0" HorizontalOptions="Start"/>
+                <ContentView  x:Name="reg_btn" BackgroundColor="Transparent" Grid.Column="1" HorizontalOptions="Start">
+                    <Label Text="Create An Account" FontFamily="Battambang-Regular" TextColor="#917c00" />
+                    <ContentView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="RegOnTapGestureRecognizerTapped"/>
+                    </ContentView.GestureRecognizers>
+                </ContentView>
+            </Grid>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

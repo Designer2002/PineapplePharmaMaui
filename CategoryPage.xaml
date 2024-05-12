@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="winui_cooler.CategoryPage"
+             xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+             xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             NavigationPage.HasNavigationBar="False" 
+             NavigationPage.BackButtonTitle="">
+    <ContentPage.Background>
+        <LinearGradientBrush>
+            <GradientStopCollection>
+                <GradientStop Color="LawnGreen" Offset="0.0"/>
+                <GradientStop Color="Transparent" Offset="0.5"/>
+                <GradientStop Color="LawnGreen" Offset="1.0"/>
+            </GradientStopCollection>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ContentPage.Resources>
+        <Style TargetType="Image" x:Key="CategoryStyle">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                 <Setter Property="IsAnimationPlaying" Value="False" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Hover">
+                            <VisualState.Setters>
+                                <Setter Property="IsAnimationPlaying" Value="True" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+    <Grid>
+        <Image Source="bg_pink.jpg" Aspect="AspectFill" Opacity="0.25"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <!-- Верхнее навигационное меню -->
+            <Border BackgroundColor="White" Margin="0,20" Grid.Row="0" VerticalOptions="Start" HeightRequest="100" Stroke="#917c00">
+                <Grid x:Name="navbar">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="40" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Margin="40" Grid.Column="0" Text="PINEAPPLE" CharacterSpacing="1.6" TextColor="#917c00" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="Start" />
+                    <!-- Лого -->
+                    <Image Grid.Row="0" Grid.Column="1" WidthRequest="75" Source="logo.png" />
+                    <!-- Название -->
+                    <Label Grid.Row="0" Grid.Column="2" Margin="15" Text="PHARMA" CharacterSpacing="1.6" TextColor="#917c00" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="Start" />
+                    <!-- Кнопки навигации -->
+                    <StackLayout Grid.Row="0" Grid.Column="2" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label Margin="10,0" Text="HOME" TextColor="#666666" FontSize="16" FontFamily="Battambang-Regular">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnHomeTapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label Margin="10,0" x:Name="news_btn" Text="NEWS" TextColor="#666666" FontSize="16" FontFamily="Battambang-Regular">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnNewsLabelTapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label Margin="10,0" x:Name="shop_btn" Text="SHOP" TextColor="#666666" FontSize="16" FontFamily="Battambang-Regular">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnShopLabelTapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                    <!-- Иконки -->
+                    <Image Grid.Row="0" VerticalOptions="Center" Grid.Column="3" WidthRequest="30" Margin="10,0">
+                        <Image.Source>
+                            <FontImageSource FontFamily="Segoe MDL2 Assets" Color="#666666" Glyph="&#xE7BF;"/>
+                        </Image.Source>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnCartTapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Grid.Row="0" VerticalOptions="Center" Grid.Column="4" WidthRequest="30" Margin="10,0">
+                        <Image.Source>
+                            <FontImageSource FontFamily="Segoe MDL2 Assets" Color="#666666" Glyph="&#xE77B;"/>
+                        </Image.Source>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnPersonTapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Grid.Row="0" VerticalOptions="Center" Grid.Column="5" WidthRequest="30" Margin="10,0">
+                        <Image.Source>
+                            <FontImageSource FontFamily="Segoe MDL2 Assets" Color="#666666" Glyph="&#xF3B1;"/>
+                        </Image.Source>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnLogoutTapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+            </Border>
+            <!-- Остальное содержимое -->
+            <ScrollView VerticalScrollBarVisibility="Never" Grid.Row="1" VerticalOptions="FillAndExpand">
+                <VerticalStackLayout>
+                    <VerticalStackLayout Margin="0,20,0,20">
+                        <VerticalStackLayout.Effects>
+                            <uranium:BlurEffect Mode="Light"/>
+                        </VerticalStackLayout.Effects>
+                        <HorizontalStackLayout Margin="20,40">
+                            <Label Margin="20,0" Text="Categories" TextColor="#666666" FontSize="18" FontFamily="Battambang-Regular">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnShopLabelTapped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Label Margin="10,0" Text=">>" TextColor="#666666" FontSize="18" FontFamily="Battambang-Regular"></Label>
+                            <Label Margin="10,0" x:Name="brdcrmb" TextColor="Black" FontAttributes="Bold" FontSize="18" FontFamily="Battambang-Regular"/>
+                        </HorizontalStackLayout>   
+                        <Grid Margin="20,20">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="300"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.ColumnSpan="2" Margin="0,0,0,20" Grid.Row="0" x:Name="title" VerticalOptions="Center" FontFamily="Battambang-Regular" FontAttributes="Bold" CharacterSpacing="1.6" TextColor="BLACK" LineBreakMode="WordWrap" FontSize="28" HorizontalOptions="Center"/>
+                            <Image x:Name="pic" MaximumHeightRequest="200" Aspect="AspectFit" Grid.Row="1" Margin="0,0,20,0" Grid.Column="1"/>
+                            <Label x:Name="decr" Margin="40,0,40,0" Grid.Column="0" Grid.Row="1" FontSize="16" TextColor="#333333" FontFamily="Battambang-Regular"/>
+                        </Grid>
+                        <Label Margin="0,20" HorizontalOptions="Center" FontAttributes="Bold" TextColor="Black" FontSize="18" FontFamily="Battambang-Regular" x:Name="found"/>
+                        <Grid x:Name="main_grd" Margin="20,20,20,20"/>
+                    </VerticalStackLayout>
+                    <Border BackgroundColor="White" HeightRequest="100" Stroke="#917c00">
+                        <Grid x:Name="footer">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="75"/>
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Margin="40" Grid.Column="0" Text="PINEAPPLE" CharacterSpacing="1.6" TextColor="#917c00" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="End" />
+                            <!-- Лого -->
+                            <Image Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" WidthRequest="75" Source="logo.png" />
+                            <!-- Название -->
+                            <Label Grid.Row="0" Grid.Column="2" Margin="15" Text="PHARMA" CharacterSpacing="1.6" TextColor="#917c00" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="Start" />
+                            <!-- Кнопки навигации -->
+                        </Grid>
+                    </Border>
+                </VerticalStackLayout>
+            </ScrollView>
+        </Grid>
+    </Grid>
+</ContentPage>

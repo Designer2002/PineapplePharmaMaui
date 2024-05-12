@@ -1,0 +1,831 @@
+hi! can you please make 6 text cards? they must be about different anti-cold medicines, must contain medicine's name, active component, small 40-50 words decription,  release form, contribute country, expiration and price
+it should look like:
+Name: Aspirin
+Active Component: Aspirin's active component
+Description: something about the use of this medical item
+Release form: Tablets
+Contribute Country: USA
+Expriration: 3 years
+Price: $1.99
+Of course! Here are six text cards about different anti-cold medicines:
+
+1. **Name:** NyQuil
+   **Active Component:** Acetaminophen, Dextromethorphan, Doxylamine
+   **Description:** NyQuil relieves cold symptoms like cough, congestion, and sore throat, providing restful sleep. It's available in liquid form and is a trusted choice for nighttime relief.
+   **Release Form:** Liquid capsules
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $9.99
+
+2. **Name:** Sudafed
+   **Active Component:** Pseudoephedrine
+   **Description:** Sudafed is a decongestant that clears nasal congestion due to colds, allergies, or sinus infections. It comes in tablet form and provides fast relief from stuffiness.
+   **Release Form:** Tablets
+   **Contribute Country:** UK
+   **Expiration:** 3 years
+   **Price:** £5.49
+
+3. **Name:** Benadryl
+   **Active Component:** Diphenhydramine
+   **Description:** Benadryl offers relief from cold symptoms like runny nose, sneezing, and itching. Its antihistamine properties provide effective allergy relief in tablet form, allowing for better sleep.
+   **Release Form:** Tablets
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $7.99
+
+4. **Name:** Mucinex
+   **Active Component:** Guaifenesin
+   **Description:** Mucinex thins and loosens mucus to relieve chest congestion caused by colds and chest infections. Its extended-release tablets provide long-lasting relief from cough and phlegm buildup.
+   **Release Form:** Extended-release tablets
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $12.49
+
+5. **Name:** DayQuil
+   **Active Component:** Acetaminophen, Dextromethorphan, Phenylephrine
+   **Description:** DayQuil offers non-drowsy relief from cold symptoms like headache, fever, and nasal congestion. Its multi-symptom formula in capsule form provides all-day comfort and productivity.
+   **Release Form:** Capsules
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $8.99
+
+6. **Name:** Robitussin
+   **Active Component:** Dextromethorphan
+   **Description:** Robitussin suppresses coughs and relieves chest congestion caused by colds and flu. Its syrup form soothes throat irritation and helps loosen mucus for easier breathing.
+   **Release Form:** Syrup
+   **Contribute Country:** USA
+   **Expiration:** 3 years
+   **Price:** $10.99
+
+
+
+
+
+
+
+
+
+
+   Of course! Here are seven text cards about different ENT (Ear, Nose, Throat) medicines:
+
+1. **Name:** Flonase
+   **Active Component:** Fluticasone propionate
+   **Description:** Flonase is a nasal spray that relieves symptoms of allergic rhinitis, including nasal congestion, sneezing, and runny nose. Its corticosteroid formula reduces inflammation in the nasal passages for long-lasting relief.
+   **Release Form:** Nasal spray
+   **Contribute Country:** USA
+   **Expiration:** 1 year
+   **Price:** $14.99
+
+2. **Name:** Claritin
+   **Active Component:** Loratadine
+   **Description:** Claritin provides non-drowsy relief from seasonal and perennial allergies, such as hay fever and pet allergies. Its antihistamine tablets alleviate symptoms like itchy eyes, sneezing, and nasal congestion.
+   **Release Form:** Tablets
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $11.49
+
+3. **Name:** Afrin
+   **Active Component:** Oxymetazoline
+   **Description:** Afrin nasal spray quickly relieves nasal congestion caused by colds, allergies, or sinusitis. Its vasoconstrictor action shrinks swollen nasal tissues, allowing for easier breathing within seconds.
+   **Release Form:** Nasal spray
+   **Contribute Country:** USA
+   **Expiration:** 1 year
+   **Price:** $9.99
+
+4. **Name:** Tylenol Sinus
+   **Active Component:** Acetaminophen, Phenylephrine
+   **Description:** Tylenol Sinus provides relief from sinus headaches, pain, and congestion associated with colds or sinus infections. Its combination formula in caplets targets multiple symptoms for effective relief.
+   **Release Form:** Caplets
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $8.99
+
+5. **Name:** Nasonex
+   **Active Component:** Mometasone furoate
+   **Description:** Nasonex nasal spray treats nasal symptoms of allergic rhinitis, such as congestion, sneezing, and itching. Its corticosteroid formula reduces inflammation in the nasal passages, providing long-lasting relief.
+   **Release Form:** Nasal spray
+   **Contribute Country:** USA
+   **Expiration:** 1 year
+   **Price:** $17.99
+
+6. **Name:** Zyrtec-D
+   **Active Component:** Cetirizine, Pseudoephedrine
+   **Description:** Zyrtec-D offers relief from allergy symptoms and nasal congestion due to colds or allergies. Its combination formula in extended-release tablets provides non-drowsy relief for up to 12 hours.
+   **Release Form:** Extended-release tablets
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $13.49
+
+7. **Name:** Vicks VapoRub
+   **Active Component:** Camphor, Menthol, Eucalyptus oil
+   **Description:** Vicks VapoRub is a topical ointment that provides relief from coughs and nasal congestion. Its medicated vapors are inhaled to soothe chest and throat discomfort, promoting easier breathing and a good night's sleep.
+   **Release Form:** Ointment
+   **Contribute Country:** USA
+   **Expiration:** 3 years
+   **Price:** $6.99
+
+
+
+
+
+
+
+
+
+
+   Certainly! Here are four text cards about different ophthalmology medicines:
+
+1. **Name:** Visine
+   **Active Component:** Tetrahydrozoline hydrochloride
+   **Description:** Visine eye drops relieve redness, itching, and irritation caused by allergies, dryness, or minor eye irritants. Its fast-acting formula provides quick relief and soothes eyes for up to 12 hours.
+   **Release Form:** Eye drops
+   **Contribute Country:** USA
+   **Expiration:** 1 year
+   **Price:** $6.99
+
+2. **Name:** Refresh Tears
+   **Active Component:** Carboxymethylcellulose sodium
+   **Description:** Refresh Tears lubricating eye drops provide long-lasting relief from dry, irritated eyes. Its gentle formula mimics natural tears, hydrating and soothing the eyes for instant comfort and improved vision.
+   **Release Form:** Eye drops
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $8.49
+
+3. **Name:** Alphagan
+   **Active Component:** Brimonidine tartrate
+   **Description:** Alphagan eye drops lower intraocular pressure (IOP) in patients with glaucoma or ocular hypertension. Its alpha-2 adrenergic agonist action reduces fluid production in the eye, preventing optic nerve damage and vision loss.
+   **Release Form:** Eye drops
+   **Contribute Country:** USA
+   **Expiration:** 1 year
+   **Price:** $15.99
+
+4. **Name:** Systane Ultra
+   **Active Component:** Polyethylene glycol, Propylene glycol
+   **Description:** Systane Ultra lubricating eye drops provide extended relief from dry eye symptoms, including burning and stinging. Its unique formula forms a protective shield over the eye surface, restoring moisture and providing lasting comfort.
+   **Release Form:** Eye drops
+   **Contribute Country:** USA
+   **Expiration:** 1 year
+   **Price:** $10.99
+
+
+
+
+
+
+
+
+
+   Absolutely! Here are nine text cards about different gastroenterology medicines:
+
+1. **Name:** Prilosec
+   **Active Component:** Omeprazole
+   **Description:** Prilosec is a proton pump inhibitor (PPI) that reduces stomach acid production, providing relief from heartburn, acid reflux, and ulcers. Its delayed-release capsules offer long-lasting protection for up to 24 hours.
+   **Release Form:** Delayed-release capsules
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $15.99
+
+2. **Name:** Imodium
+   **Active Component:** Loperamide
+   **Description:** Imodium controls diarrhea by slowing down bowel movements and reducing stool frequency. Its caplets provide quick relief from acute diarrhea and traveler's diarrhea, allowing for better hydration and comfort.
+   **Release Form:** Caplets
+   **Contribute Country:** USA
+   **Expiration:** 3 years
+   **Price:** $9.49
+
+3. **Name:** Nexium
+   **Active Component:** Esomeprazole
+   **Description:** Nexium is a PPI that treats gastroesophageal reflux disease (GERD), erosive esophagitis, and ulcers. Its delayed-release capsules provide long-lasting relief from acid-related conditions, promoting healing and symptom control.
+   **Release Form:** Delayed-release capsules
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $17.99
+
+4. **Name:** Pepto-Bismol
+   **Active Component:** Bismuth subsalicylate
+   **Description:** Pepto-Bismol relieves symptoms of indigestion, upset stomach, and nausea caused by overeating or stomach flu. Its chewable tablets provide a soothing coating action and reduce diarrhea frequency.
+   **Release Form:** Chewable tablets
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $7.99
+
+5. **Name:** Miralax
+   **Active Component:** Polyethylene glycol 3350
+   **Description:** Miralax is an osmotic laxative that relieves constipation by drawing water into the colon, softening stool and promoting regular bowel movements. Its powder form dissolves easily in water or juice for easy ingestion.
+   **Release Form:** Powder for oral solution
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $10.99
+
+6. **Name:** Gas-X
+   **Active Component:** Simethicone
+   **Description:** Gas-X relieves gas, bloating, and discomfort caused by gas accumulation in the digestive tract. Its chewable tablets break down gas bubbles for quick relief, allowing for easier digestion and comfort after meals.
+   **Release Form:** Chewable tablets
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $8.49
+
+7. **Name:** Colace
+   **Active Component:** Docusate sodium
+   **Description:** Colace is a stool softener that relieves constipation by adding moisture to stool, making it easier to pass. Its capsules provide gentle and effective relief from occasional constipation without causing cramping or harsh side effects.
+   **Release Form:** Capsules
+   **Contribute Country:** USA
+   **Expiration:** 3 years
+   **Price:** $9.99
+
+8. **Name:** Reglan
+   **Active Component:** Metoclopramide
+   **Description:** Reglan helps relieve symptoms of gastrointestinal disorders like gastroparesis and acid reflux by increasing stomach contractions and emptying. Its oral tablets provide fast relief from nausea, vomiting, and heartburn.
+   **Release Form:** Tablets
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $12.99
+
+9. **Name:** Zantac
+   **Active Component:** Ranitidine
+   **Description:** Zantac is an H2 blocker that reduces stomach acid production, providing relief from heartburn, acid indigestion, and sour stomach. Its tablets offer fast-acting relief and prevention of acid-related symptoms for up to 12 hours.
+   **Release Form:** Tablets
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $14.49
+
+
+
+
+
+
+
+
+
+
+   Certainly! Here are eight text cards about different bone health medicines:
+
+1. **Name:** Fosamax
+   **Active Component:** Alendronate
+   **Description:** Fosamax is a bisphosphonate medication used to treat osteoporosis and prevent bone fractures. It works by slowing down bone loss and increasing bone density, reducing the risk of fractures.
+   **Release Form:** Tablets
+   **Contribute Country:** USA
+   **Expiration:** 3 years
+   **Price:** $20.99
+
+2. **Name:** Boniva
+   **Active Component:** Ibandronate
+   **Description:** Boniva is a bisphosphonate medication prescribed for osteoporosis treatment and prevention. It helps increase bone density and reduce the risk of fractures in postmenopausal women.
+   **Release Form:** Tablets
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $25.99
+
+3. **Name:** Calcitonin
+   **Active Component:** Calcitonin salmon
+   **Description:** Calcitonin is a hormone medication used to treat osteoporosis in postmenopausal women. It helps slow down bone loss and reduce the risk of fractures by inhibiting bone resorption.
+   **Release Form:** Nasal spray
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $30.99
+
+4. **Name:** Evista
+   **Active Component:** Raloxifene
+   **Description:** Evista is a selective estrogen receptor modulator (SERM) prescribed for osteoporosis treatment and prevention in postmenopausal women. It helps increase bone density and reduce the risk of fractures.
+   **Release Form:** Tablets
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $22.99
+
+5. **Name:** Prolia
+   **Active Component:** Denosumab
+   **Description:** Prolia is a monoclonal antibody medication used to treat osteoporosis in postmenopausal women and men at high risk of fractures. It helps increase bone density and reduce the risk of fractures by inhibiting bone resorption.
+   **Release Form:** Injection
+   **Contribute Country:** USA
+   **Expiration:** 1 year
+   **Price:** $200.99
+
+6. **Name:** Forteo
+   **Active Component:** Teriparatide
+   **Description:** Forteo is a synthetic form of parathyroid hormone used to treat osteoporosis in men and postmenopausal women at high risk of fractures. It helps stimulate new bone formation and increase bone density.
+   **Release Form:** Injection
+   **Contribute Country:** USA
+   **Expiration:** 1 year
+   **Price:** $500.99
+
+7. **Name:** Actonel
+   **Active Component:** Risedronate
+   **Description:** Actonel is a bisphosphonate medication used to treat osteoporosis and prevent bone fractures. It works by slowing down bone loss and increasing bone density, reducing the risk of fractures.
+   **Release Form:** Tablets
+   **Contribute Country:** USA
+   **Expiration:** 3 years
+   **Price:** $18.99
+
+8. **Name:** Reclast
+   **Active Component:** Zoledronic acid
+   **Description:** Reclast is a bisphosphonate medication used to treat osteoporosis and prevent bone fractures. It helps increase bone density and reduce the risk of fractures with a single annual infusion.
+   **Release Form:** Infusion
+   **Contribute Country:** USA
+   **Expiration:** 1 year
+   **Price:** $1000.99
+
+
+
+
+
+
+
+
+
+   Certainly! Here are three text cards about different veterinary medicines:
+
+1. **Name:** Rimadyl
+   **Active Component:** Carprofen
+   **Description:** Rimadyl is a non-steroidal anti-inflammatory drug (NSAID) prescribed for dogs to relieve pain and inflammation associated with osteoarthritis and postoperative pain. Its chewable tablets provide effective relief for improved mobility and comfort.
+   **Release Form:** Chewable tablets
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $30.99
+
+2. **Name:** Revolution
+   **Active Component:** Selamectin
+   **Description:** Revolution is a topical medication for cats and dogs that provides broad-spectrum protection against fleas, ticks, heartworms, ear mites, and intestinal parasites. Its monthly application is easy to administer and offers comprehensive parasite control.
+   **Release Form:** Topical solution
+   **Contribute Country:** USA
+   **Expiration:** 1 year
+   **Price:** $40.99
+
+3. **Name:** Baytril
+   **Active Component:** Enrofloxacin
+   **Description:** Baytril is an antibiotic medication prescribed for dogs and cats to treat bacterial infections of the skin, urinary tract, and respiratory system. Its oral tablets provide effective treatment for a wide range of bacterial diseases.
+   **Release Form:** Oral tablets
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $25.99
+
+
+
+
+
+
+
+
+Of course! Here are thirteen text cards about different dental health medicines:
+
+1. **Name:** Sensodyne
+   **Active Component:** Potassium nitrate, Sodium fluoride
+   **Description:** Sensodyne toothpaste is specially formulated to relieve tooth sensitivity and protect against cavities. Its fluoride-rich formula strengthens enamel and soothes sensitive teeth for long-lasting relief and improved oral health.
+   **Release Form:** Toothpaste
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $5.99
+
+2. **Name:** Crest Pro-Health
+   **Active Component:** Stannous fluoride
+   **Description:** Crest Pro-Health toothpaste provides comprehensive oral care by fighting cavities, plaque, gingivitis, and sensitivity. Its advanced formula strengthens enamel and freshens breath for a healthier mouth.
+   **Release Form:** Toothpaste
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $4.99
+
+3. **Name:** Oral-B Glide
+   **Active Component:** PTFE (polytetrafluoroethylene)
+   **Description:** Oral-B Glide dental floss is designed to effectively remove plaque and food particles from between teeth and below the gumline. Its smooth texture slides easily and comfortably, promoting better oral hygiene and gum health.
+   **Release Form:** Dental floss
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $3.49
+
+4. **Name:** Listerine
+   **Active Component:** Eucalyptol, Menthol, Thymol
+   **Description:** Listerine mouthwash kills germs that cause bad breath, plaque, and gum disease. Its antiseptic formula freshens breath and provides 24-hour protection against oral bacteria for a healthier mouth.
+   **Release Form:** Mouthwash
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $6.99
+
+5. **Name:** ACT
+   **Active Component:** Fluoride
+   **Description:** ACT mouthwash strengthens enamel and prevents cavities by delivering fluoride to teeth. Its alcohol-free formula freshens breath and provides long-lasting protection against tooth decay and acid erosion.
+   **Release Form:** Mouthwash
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $7.99
+
+6. **Name:** Colgate Total
+   **Active Component:** Triclosan, Sodium fluoride
+   **Description:** Colgate Total toothpaste fights bacteria, plaque, and gingivitis while providing all-around protection for teeth and gums. Its fluoride-rich formula strengthens enamel and freshens breath for a healthier smile.
+   **Release Form:** Toothpaste
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $4.99
+
+7. **Name:** Waterpik
+   **Active Component:** N/A (Oral irrigation)
+   **Description:** Waterpik water flosser uses pulsating water to clean between teeth and below the gumline, removing plaque and debris for healthier gums and teeth. Its adjustable pressure settings and multiple tips make it suitable for all dental needs.
+   **Release Form:** Oral irrigation device
+   **Contribute Country:** USA
+   **Expiration:** 3 years
+   **Price:** $59.99
+
+8. **Name:** Sensodyne Rapid Relief
+   **Active Component:** Potassium nitrate, Sodium fluoride
+   **Description:** Sensodyne Rapid Relief toothpaste provides fast relief from tooth sensitivity pain and strengthens enamel against future sensitivity. Its clinically proven formula offers long-lasting protection for sensitive teeth.
+   **Release Form:** Toothpaste
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $6.99
+
+9. **Name:** Tom's of Maine
+   **Active Component:** Sodium fluoride
+   **Description:** Tom's of Maine toothpaste offers natural oral care solutions made with fluoride and naturally derived ingredients. Its fluoride-rich formula fights cavities, freshens breath, and promotes overall dental health without artificial flavors or colors.
+   **Release Form:** Toothpaste
+   **Contribute Country:** USA
+   **Expiration:** 2 years
+   **Price:** $4.99
+
+10. **Name:** Oral-B Pro-Health
+    **Active Component:** Stannous fluoride
+    **Description:** Oral-B Pro-Health toothpaste protects against cavities, plaque, gingivitis, sensitivity, and bad breath. Its advanced formula strengthens enamel and fights bacteria for comprehensive oral care and improved dental health.
+    **Release Form:** Toothpaste
+    **Contribute Country:** USA
+    **Expiration:** 2 years
+    **Price:** $5.49
+
+11. **Name:** ACT Kids
+    **Active Component:** Fluoride
+    **Description:** ACT Kids fluoride rinse strengthens enamel and prevents cavities in children aged 6 and older. Its bubblegum-flavored formula encourages
+
+
+
+
+
+
+
+
+Of course! Here are thirteen text cards about different women's care items for gynecology and menstruation:
+
+1. **Name:** Always Ultra Thin Pads
+   **Description:** Always Ultra Thin Pads offer reliable protection and comfort during menstruation. Their flexible design with wings provides maximum absorbency and leakage protection for all-day confidence.
+   **Release Form:** Menstrual pads
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $6.99
+
+2. **Name:** Tampax Pearl Tampons
+   **Description:** Tampax Pearl Tampons feature a smooth plastic applicator and a LeakGuard braid for secure protection against leaks. Their compact size and discreet packaging make them convenient for on-the-go use.
+   **Release Form:** Menstrual tampons
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $7.99
+
+3. **Name:** DivaCup Menstrual Cup
+   **Description:** DivaCup Menstrual Cup offers eco-friendly and cost-effective menstrual protection. Made of medical-grade silicone, it provides leak-free protection for up to 12 hours and can be reused for years.
+   **Release Form:** Menstrual cup
+   **Contribute Country:** Canada
+   **Expiration:** N/A
+   **Price:** $29.99
+
+4. **Name:** Summer's Eve Cleansing Wash
+   **Description:** Summer's Eve Cleansing Wash is pH-balanced and specially formulated for feminine hygiene. Its gentle formula cleanses and refreshes without irritation, leaving you feeling clean and confident.
+   **Release Form:** Feminine wash
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $4.99
+
+5. **Name:** Vagisil Odor Block Intimate Powder
+   **Description:** Vagisil Odor Block Intimate Powder absorbs moisture and neutralizes odor for long-lasting freshness. Its talc-free formula is gentle on sensitive skin and helps prevent chafing and discomfort.
+   **Release Form:** Intimate powder
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $5.49
+
+6. **Name:** Always Discreet Incontinence Liners
+   **Description:** Always Discreet Incontinence Liners offer discreet bladder protection for women experiencing light bladder leaks. Their thin design and absorbent core provide comfortable and reliable protection.
+   **Release Form:** Incontinence liners
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $8.99
+
+7. **Name:** L. Organic Cotton Pads
+   **Description:** L. Organic Cotton Pads are made with organic cotton and free from harmful chemicals. Their breathable design and absorbent core provide comfortable and safe menstrual protection.
+   **Release Form:** Menstrual pads
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $7.49
+
+8. **Name:** Summer's Eve Deodorant Spray
+   **Description:** Summer's Eve Deodorant Spray keeps you feeling fresh and confident all day long. Its gentle formula neutralizes odor and provides a light, refreshing scent for intimate freshness.
+   **Release Form:** Deodorant spray
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $3.99
+
+9. **Name:** Always Infinity FlexFoam Pads
+   **Description:** Always Infinity FlexFoam Pads feature a unique FlexFoam core that absorbs 10 times its weight. Their super thin design and form-fitting shape provide comfortable and reliable protection for heavy flow days.
+   **Release Form:** Menstrual pads
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $9.99
+
+10. **Name:** L. Organic Cotton Tampons
+    **Description:** L. Organic Cotton Tampons are made with organic cotton and free from synthetic materials. Their smooth applicator and leak-resistant design provide comfortable and reliable protection during menstruation.
+    **Release Form:** Menstrual tampons
+    **Contribute Country:** USA
+    **Expiration:** N/A
+    **Price:** $8.49
+
+11. **Name:** Kotex U Click Compact Tampons
+    **Description:** Kotex U Click Compact Tampons feature a small, discreet design and a smooth applicator for easy insertion. Their compact size makes them convenient to carry in your purse or pocket.
+    **Release Form:** Menstrual tampons
+    **Contribute Country:** USA
+    **Expiration:** N/A
+    **Price:** $6.99
+
+12. **Name:** Poise Incontinence Pads
+    **Description:** Poise Incontinence Pads offer discreet protection for women experiencing light bladder leakage. Their absorb-loc core and leak-block sides provide dryness and odor control for all-day confidence.
+    **Release Form:** Incontinence pads
+    **Contribute Country:** USA
+    **Expiration:** N/A
+    **Price:** $10.99
+
+13. **Name:** Always Radiant FlexFoam Pads
+    **Description:** Always Radiant FlexFoam Pads feature a unique FlexFoam core that moves with you for comfortable protection. Their light, clean scent and soft, breathable top layer provide a fresh feeling all day long.
+    **Release Form:** Menstrual pads
+    **Contribute Country:** USA
+    **Expiration:** N/A
+    **Price:** $7.99
+
+
+
+
+    Certainly! Here are thirteen text cards about different baby care items that are sold in a drugstore:
+
+1. **Name:** Pampers Swaddlers Diapers
+   **Description:** Pampers Swaddlers Diapers offer softness and protection for newborns. Their absorb-away liner pulls wetness and mess away from baby's skin for up to 12 hours of protection, while the umbilical cord notch keeps the area dry and comfortable.
+   **Release Form:** Disposable diapers
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $24.99
+
+2. **Name:** Johnson's Baby Shampoo
+   **Description:** Johnson's Baby Shampoo is gentle on baby's delicate skin and eyes. Its tear-free formula cleanses without drying, leaving hair soft, shiny, and smelling fresh.
+   **Release Form:** Baby shampoo
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $3.99
+
+3. **Name:** Huggies Natural Care Wipes
+   **Description:** Huggies Natural Care Wipes are made with 99% water and plant-based materials, making them gentle and safe for baby's sensitive skin. Their thick and soft texture provides effective cleaning and moisturizing.
+   **Release Form:** Baby wipes
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $5.49
+
+4. **Name:** Desitin Maximum Strength Diaper Rash Cream
+   **Description:** Desitin Maximum Strength Diaper Rash Cream provides relief and protection against diaper rash. Its zinc oxide formula creates a protective barrier to soothe and heal irritated skin.
+   **Release Form:** Diaper rash cream
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $6.99
+
+5. **Name:** Aveeno Baby Daily Moisture Lotion
+   **Description:** Aveeno Baby Daily Moisture Lotion nourishes and protects baby's delicate skin. Its non-greasy formula with natural colloidal oatmeal moisturizes for 24 hours, leaving skin soft and smooth.
+   **Release Form:** Baby lotion
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $7.99
+
+6. **Name:** Gerber Graduates Puffs
+   **Description:** Gerber Graduates Puffs are melt-in-your-mouth snacks for babies learning to self-feed. Their bite-sized pieces are easy to grasp and dissolve quickly, making them perfect for little ones exploring new tastes and textures.
+   **Release Form:** Baby snacks
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $3.49
+
+7. **Name:** Aquaphor Baby Healing Ointment
+   **Description:** Aquaphor Baby Healing Ointment soothes and protects dry, chapped, or irritated skin. Its gentle formula is fragrance-free and hypoallergenic, making it suitable for sensitive skin and diaper rash prevention.
+   **Release Form:** Healing ointment
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $8.99
+
+8. **Name:** Dreft Stage 1: Newborn Liquid Laundry Detergent
+   **Description:** Dreft Stage 1: Newborn Liquid Laundry Detergent is specially formulated for baby's delicate skin. Its hypoallergenic formula removes stains and odors without harsh chemicals, leaving clothes clean and soft.
+   **Release Form:** Laundry detergent
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $12.99
+
+9. **Name:** Babyganics Alcohol-Free Foaming Hand Sanitizer
+   **Description:** Babyganics Alcohol-Free Foaming Hand Sanitizer kills 99.9% of germs without drying baby's hands. Its gentle, plant-based formula is fragrance-free and safe for frequent use.
+   **Release Form:** Hand sanitizer
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $4.99
+
+10. **Name:** NUK Simply Natural Baby Bottle
+    **Description:** NUK Simply Natural Baby Bottle mimics the shape and feel of mom's breast for comfortable feeding. Its soft silicone nipple with multiple feeding holes provides a natural flow and reduces colic.
+    **Release Form:** Baby bottle
+    **Contribute Country:** USA
+    **Expiration:** N/A
+    **Price:** $6.99
+
+11. **Name:** Boogie Wipes Saline Nose Wipes
+    **Description:** Boogie Wipes Saline Nose Wipes gently clean and moisturize baby's nose, making it easier to breathe. Their hypoallergenic formula with saline helps dissolve mucus and soothe dry, irritated skin.
+    **Release Form:** Saline nose wipes
+    **Contribute Country:** USA
+    **Expiration:** N/A
+    **Price:** $3.99
+
+12. **Name:** Baby Mum-Mum Rice Rusks
+    **Description:** Baby Mum-Mum Rice Rusks are gluten-free teething biscuits for babies. Their dissolvable texture and gentle flavor make them ideal for soothing teething pain and promoting oral development.
+    **Release Form:** Teething biscuits
+    **Contribute Country:** USA
+    **Expiration:** N/A
+    **Price:** $2.99
+
+13. **Name:** Boudreaux's Butt Paste Diaper Rash Ointment
+    **Description:** Boudreaux's Butt Paste Diaper Rash Ointment protects against and treats diaper rash with its maximum-strength formula. Its thick paste creates a protective barrier to seal out wetness and soothe irritated skin.
+    **Release Form:** Diaper rash ointment
+    **Contribute Country:** USA
+    **Expiration:** N/A
+    **Price:** $7.49
+
+
+
+
+
+
+
+
+    Absolutely! Here are ten text cards about different first aid items that are commonly sold in a drugstore:
+
+1. **Name:** Band-Aid Flexible Fabric Bandages
+   **Description:** Band-Aid Flexible Fabric Bandages offer durable protection for minor cuts and scrapes. Their flexible fabric stretches and flexes with movement for lasting comfort and protection.
+   **Release Form:** Adhesive bandages
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $3.99
+
+2. **Name:** Neosporin First Aid Antibiotic Ointment
+   **Description:** Neosporin First Aid Antibiotic Ointment prevents infection and promotes wound healing. Its triple antibiotic formula kills bacteria and provides long-lasting protection against infection.
+   **Release Form:** Antibiotic ointment
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $6.99
+
+3. **Name:** ACE Elastic Bandage
+   **Description:** ACE Elastic Bandage provides compression and support for sprains, strains, and other injuries. Its breathable material and adjustable design ensure a comfortable fit for all-day wear.
+   **Release Form:** Elastic bandage
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $7.49
+
+4. **Name:** Benadryl Itch Relief Stick
+   **Description:** Benadryl Itch Relief Stick provides fast relief from insect bites, poison ivy, oak, and sumac. Its convenient applicator delivers cooling relief and calms itching for immediate comfort.
+   **Release Form:** Itch relief stick
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $5.99
+
+5. **Name:** BurnJel Burn Relief Gel
+   **Description:** BurnJel Burn Relief Gel soothes and cools minor burns and sunburns. Its water-based formula with lidocaine provides instant relief from pain and discomfort.
+   **Release Form:** Burn relief gel
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $8.99
+
+6. **Name:** Tweezerman Stainless Steel Tweezers
+   **Description:** Tweezerman Stainless Steel Tweezers are precision-crafted for easy and precise splinter removal. Their pointed tips and stainless steel construction ensure durability and effectiveness.
+   **Release Form:** Tweezers
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $10.99
+
+7. **Name:** Steri-Strip Skin Closures
+   **Description:** Steri-Strip Skin Closures provide non-invasive wound closure for small cuts and incisions. Their breathable material and adhesive backing promote faster healing and reduce scarring.
+   **Release Form:** Skin closures
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $6.49
+
+8. **Name:** First Aid Only CPR Mask
+   **Description:** First Aid Only CPR Mask provides a barrier between rescuer and victim during CPR. Its compact design and one-way valve ensure safe and effective resuscitation in emergency situations.
+   **Release Form:** CPR mask
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $4.99
+
+9. **Name:** Hydrogen Peroxide
+   **Description:** Hydrogen Peroxide is a versatile antiseptic solution used for wound cleaning and disinfection. Its bubbling action helps remove debris and kill bacteria for effective wound care.
+   **Release Form:** Antiseptic solution
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $2.99
+
+10. **Name:** Tegaderm Transparent Dressings
+    **Description:** Tegaderm Transparent Dressings provide a waterproof and breathable barrier to protect wounds and IV sites. Their transparent design allows for easy monitoring of the wound without removing the dressing.
+    **Release Form:** Transparent dressings
+    **Contribute Country:** USA
+    **Expiration:** N/A
+    **Price:** $9.99
+
+
+
+
+
+
+
+
+
+    Certainly! Here are five text cards about different spa items that are commonly sold in a drugstore:
+
+1. **Name:** Epsom Salt
+   **Description:** Epsom Salt is known for its therapeutic properties, promoting relaxation and muscle recovery. Add it to warm bathwater to soothe sore muscles, relieve stress, and detoxify the body.
+   **Release Form:** Bath salt
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $4.99
+
+2. **Name:** Lavender Essential Oil
+   **Description:** Lavender Essential Oil is renowned for its calming and aromatherapeutic properties. Add a few drops to a diffuser or bathwater to promote relaxation, reduce stress, and improve sleep quality.
+   **Release Form:** Essential oil
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $8.99
+
+3. **Name:** Facial Sheet Masks
+   **Description:** Facial Sheet Masks are infused with hydrating and nourishing ingredients to rejuvenate the skin. Apply the mask to clean skin and relax for 15-20 minutes to enjoy a spa-like experience at home.
+   **Release Form:** Sheet mask
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $3.49
+
+4. **Name:** Foot Spa Bath Massager
+   **Description:** Foot Spa Bath Massager provides a luxurious foot massage experience at home. Its bubbling and vibrating functions soothe tired feet, relieve muscle tension, and improve circulation.
+   **Release Form:** Foot spa
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $29.99
+
+5. **Name:** Aromatherapy Candles
+   **Description:** Aromatherapy Candles are infused with essential oils to create a relaxing ambiance and promote well-being. Light the candle to fill the room with soothing scents and unwind after a long day.
+   **Release Form:** Candle
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $12.99
+
+These spa items offer relaxation, rejuvenation, and self-care right from the comfort of your own home.
+
+
+
+
+
+Of course! Here are seven text cards about different contraception items that are commonly sold in a drugstore:
+
+1. **Name:** Condoms
+   **Description:** Condoms are a barrier method of contraception that helps prevent pregnancy and reduce the risk of sexually transmitted infections (STIs). Available in various sizes, textures, and materials, condoms provide reliable protection during sexual intercourse.
+   **Release Form:** Condom
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $9.99 (pack of 12)
+
+2. **Name:** Birth Control Pills
+   **Description:** Birth Control Pills are oral contraceptives that contain hormones to prevent ovulation and thicken cervical mucus, making it difficult for sperm to reach the egg. Taken daily, these pills offer effective pregnancy prevention when used correctly.
+   **Release Form:** Oral contraceptive
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $15.99 (one-month supply)
+
+3. **Name:** Emergency Contraceptive Pill (Morning-After Pill)
+   **Description:** Emergency Contraceptive Pill, also known as the Morning-After Pill, is a backup method of contraception used to prevent pregnancy after unprotected sex or contraceptive failure. It works by delaying ovulation or preventing fertilization.
+   **Release Form:** Oral contraceptive
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $49.99
+
+4. **Name:** Birth Control Patch
+   **Description:** Birth Control Patch is a transdermal contraceptive patch that delivers hormones through the skin to prevent pregnancy. Applied weekly, it works by suppressing ovulation and thickening cervical mucus to inhibit sperm penetration.
+   **Release Form:** Transdermal patch
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $29.99 (one-month supply)
+
+5. **Name:** Contraceptive Sponge
+   **Description:** Contraceptive Sponge is a soft, disposable foam device inserted into the vagina to prevent pregnancy. It contains spermicide and covers the cervix to block sperm from entering the uterus. Effective for up to 24 hours, it provides convenient and discreet contraception.
+   **Release Form:** Vaginal contraceptive
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $12.99 (pack of 3)
+
+6. **Name:** Intrauterine Device (IUD)
+   **Description:** Intrauterine Device (IUD) is a long-acting reversible contraceptive inserted into the uterus by a healthcare provider. Available in hormonal and non-hormonal options, it provides highly effective, low-maintenance contraception for several years.
+   **Release Form:** Intrauterine device
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $300-$1,000 (depending on type and brand)
+
+7. **Name:** Diaphragm
+   **Description:** Diaphragm is a barrier method of contraception that covers the cervix and prevents sperm from reaching the uterus. Used with spermicide, it offers reliable pregnancy prevention and can be inserted discreetly before intercourse.
+   **Release Form:** Vaginal contraceptive
+   **Contribute Country:** USA
+   **Expiration:** N/A
+   **Price:** $49.99 (one-time purchase)
+
+These contraception options provide individuals with a variety of choices to suit their lifestyle and reproductive needs. It's important to consult with a healthcare provider to determine the best method for each individual.

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             xmlns:m="clr-namespace:UraniumUI.Icons.MaterialIcons;assembly=UraniumUI.Icons.MaterialIcons"
+             xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
+             xmlns:validation="clr-namespace:InputKit.Shared.Validations;assembly=InputKit.Maui"
+             xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+             xmlns:local="clr-namespace:winui_cooler;"
+             x:Class="winui_cooler.RegPage"
+             NavigationPage.HasNavigationBar="False" 
+             NavigationPage.BackButtonTitle="">
+    <ContentPage.Resources>
+        <FontImageSource x:Key="LockIcon" FontFamily="Segoe MDL2 Assets" Glyph="&#xE1F7;" />
+        <FontImageSource x:Key="EmailIcon" FontFamily="Segoe MDL2 Assets" Glyph="&#xE715;" />
+        <FontImageSource x:Key="ManIcon" FontFamily="Segoe MDL2 Assets" Glyph="&#xE77B;" />
+        <FontImageSource x:Key="ConfirmIcon" FontFamily="Segoe MDL2 Assets" Glyph="&#xEB50;" />
+    </ContentPage.Resources>
+    <Grid>
+        <Image Aspect="AspectFill" Source="fruit.jpg" MinimumHeightRequest="768"/>
+        <ScrollView>
+            <input:FormView SubmitCommand="{Binding SubmitCommand}" WidthRequest="600" HorizontalOptions="Center" Background="#333333" MinimumHeightRequest="968">
+                <input:FormView.Effects>
+                    <uranium:BlurEffect Mode="Dark" />
+                </input:FormView.Effects>
+                <Image HorizontalOptions="Center" Source="logo.png" MaximumHeightRequest="100" Margin="0, 20, 0, 0"/>
+                <Label FontFamily="Battambang-Regular" TextColor="White" Text="Create A New Account" FontSize="22" HorizontalOptions="Center"/>
+                <Label FontFamily="Battambang-Regular" TextColor="LightYellow" Text="Join our community!" FontSize="14" HorizontalOptions="Center"/>
+                <Border Stroke="DarkGray" HeightRequest="50"  MaximumWidthRequest="400" Background="White" HorizontalOptions="Center" >
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+                    <ContentView x:Name="gogle" BackgroundColor="Black">
+                        <ContentView.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GogleOnTapGestureRecognizerTapped"/>
+                        </ContentView.GestureRecognizers>
+                        <Grid Padding="0,0,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Image x:Name="g_logo"  MinimumHeightRequest="40" MinimumWidthRequest="40" Grid.Column="0"/>
+                            <Label TextColor="LightGray" Padding="5,5,5,5" Grid.Column="1" x:Name="gogle_text" HorizontalOptions="Start" VerticalOptions="Center" FontFamily="Battambang-Regular" Text="Continue with Google" FontSize="16"/>
+                        </Grid>
+                    </ContentView>
+                </Border>
+                <Label HorizontalOptions="Center" TextColor="Gray" FontFamily="Battambang-Regular" Margin="0,20,0,20" FontSize="11" Text="------------- or Create Your Profile ------------- "></Label>
+                <material:TextField
+                    TitleColor="LightGray"
+                    TextColor="#917c00"
+                    WidthRequest="400"
+                    HorizontalOptions="Center"
+                    FontFamily="Battambang-Regular"
+                    x:Name="name_entry"
+                    Title="Your Name"
+                    Icon="{StaticResource ManIcon}"
+                    AccentColor="White">
+                    <material:TextField.Attachments>
+                        <Image x:Name="name_invalid_image" Source="error.png" HeightRequest="20" IsVisible="False"/>
+                    </material:TextField.Attachments> 
+                </material:TextField>
+                <Label TextColor="Red" Margin="100,0" FontFamily="Battambang-Regular" IsVisible="False" FontSize="12" x:Name="invalid_name"></Label>
+                <material:TextField
+                    TitleColor="LightGray"
+                    TextColor="#917c00"
+                    WidthRequest="400"
+                    HorizontalOptions="Center"
+                    FontFamily="Battambang-Regular"
+                    x:Name="email_entry"
+                    Title="E-mail"
+                    Icon="{StaticResource EmailIcon}"
+                    AccentColor="White">
+                    <material:TextField.Attachments>
+                        <Image x:Name="email_invalid_image" Source="error.png" HeightRequest="20" IsVisible="False"/>
+                    </material:TextField.Attachments> 
+                </material:TextField>
+                <Label TextColor="Red"  Margin="100,0" FontFamily="Battambang-Regular" IsVisible="False" FontSize="12" x:Name="invalid_email"></Label>
+                <material:TextField
+                    TitleColor="LightGray"
+                    TextColor="#917c00"
+                    WidthRequest="400"
+                    HorizontalOptions="Center"
+                    FontFamily="Battambang-Regular"
+                    x:Name="pass_entry"
+                    Title="Password"
+                    IsPassword="True"
+                    Icon="{StaticResource LockIcon}"
+                    AccentColor="White">
+                    
+                    <material:TextField.Attachments>
+                        <material:TextFieldPasswordShowHideAttachment />
+                        <Image x:Name="password_invalid_image" Source="error.png" HeightRequest="20" IsVisible="False"/>
+                    </material:TextField.Attachments> 
+                </material:TextField>
+                <Label TextColor="Red"  Margin="100,0" FontFamily="Battambang-Regular" IsVisible="False" FontSize="12" x:Name="invalid_password"></Label>
+                <material:TextField
+                    TitleColor="LightGray"
+                    TextColor="#917c00"
+                    WidthRequest="400"
+                    HorizontalOptions="Center"
+                    FontFamily="Battambang-Regular"
+                    x:Name="confirm_entry"
+                    Title="Password Confirmation"
+                    IsPassword="True"
+                    Icon="{StaticResource ConfirmIcon}"
+                    AccentColor="White">
+                   
+                    <material:TextField.Attachments>
+                        <material:TextFieldPasswordShowHideAttachment />
+                        <Image x:Name="confirm_invalid_image" Source="error.png" HeightRequest="20" IsVisible="False"/>
+                    </material:TextField.Attachments>
+                </material:TextField>
+                <Label TextColor="Red"  Margin="100,0" FontFamily="Battambang-Regular" IsVisible="False" FontSize="12" x:Name="invalid_confirm_password"></Label>
+                <Grid WidthRequest="400">
+                    <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <CheckBox Grid.Column="0" Color="#917c00"/>
+                    <ContentView VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="1" BackgroundColor="Transparent" x:Name="agree_btn">
+                        <Label VerticalOptions="Center" Text="I agree with the user license" FontFamily="Battambang-Regular" TextColor="LightYellow" />
+                        <ContentView.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="AgreeOnTapGestureRecognizerTapped"/>
+                        </ContentView.GestureRecognizers>
+                    </ContentView>
+                </Grid>
+                <Border Stroke="Transparent" WidthRequest="200" Margin="0,30,0,0">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10" />
+                    </Border.StrokeShape>
+                    <ContentView Padding="10,10,10,10" x:Name="reg_btn" BackgroundColor="LightYellow" input:FormView.IsSubmitButton="True">
+                        <Label TextColor="#666666" HorizontalOptions="Center" Text="Register"  FontFamily="Battambang-Regular"/>
+                        <ContentView.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="RegisterOnTapGestureRecognizerTapped"/>
+                        </ContentView.GestureRecognizers>
+                    </ContentView>
+                </Border>
+                <Grid HorizontalOptions="Center" Margin="0,20,0,0" WidthRequest="300">
+                    <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Have An Account?" FontFamily="Battambang-Regular" TextColor="White" Grid.Column="0" HorizontalOptions="Start"/>
+                    <ContentView x:Name="log_btn" BackgroundColor="Transparent" Grid.Column="1" HorizontalOptions="End">
+                        <Label Text="Sign In" FontFamily="Battambang-Regular" TextColor="LightYellow" />
+                        <ContentView.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="LogOnTapGestureRecognizerTapped"/>
+                        </ContentView.GestureRecognizers>
+                    </ContentView>
+                </Grid>
+            </input:FormView>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="winui_cooler.Shop"
+             xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+             Title="Shop"
+             NavigationPage.HasNavigationBar="False" 
+             NavigationPage.BackButtonTitle="">
+    <ContentPage.Background>
+        <LinearGradientBrush>
+            <GradientStopCollection>
+                <GradientStop Color="#003AA2" Offset="0.0"/>
+                <GradientStop Color="Transparent" Offset="0.5"/>
+                <GradientStop Color="#003AA2" Offset="1.0"/>
+            </GradientStopCollection>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ContentPage.Resources>
+</ContentPage.Resources>
+    <Grid>
+        <Image Source="many.jpg" Aspect="AspectFill" Opacity="0.25"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <!-- Верхнее навигационное меню -->
+            <Border BackgroundColor="White" Margin="0,20" Grid.Row="0" VerticalOptions="Start" HeightRequest="100" Stroke="#917c00">
+                <Grid x:Name="navbar">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="40" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Margin="40" Grid.Column="0" Text="PINEAPPLE" CharacterSpacing="1.6" TextColor="#917c00" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="Start" />
+                    <!-- Лого -->
+                    <Image Grid.Row="0" Grid.Column="1" WidthRequest="75" Source="logo.png" />
+                    <!-- Название -->
+                    <Label Grid.Row="0" Grid.Column="2" Margin="15" Text="PHARMA" CharacterSpacing="1.6" TextColor="#917c00" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="Start" />
+                    <!-- Кнопки навигации -->
+                    <StackLayout Grid.Row="0" Grid.Column="2" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label Margin="10,0" Text="HOME" TextColor="#666666" FontSize="16" FontFamily="Battambang-Regular">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnHomeTapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label Margin="10,0" x:Name="news_btn" Text="NEWS" TextColor="#666666" FontSize="16" FontFamily="Battambang-Regular">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnNewsLabelTapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label Margin="10,0" x:Name="shop_btn" Text="SHOP" TextColor="#666666" FontSize="16" FontFamily="Battambang-Regular">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnShopLabelTapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                    <!-- Иконки -->
+                    <Image Grid.Row="0" VerticalOptions="Center" Grid.Column="3" WidthRequest="30" Margin="10,0">
+                        <Image.Source>
+                            <FontImageSource FontFamily="Segoe MDL2 Assets" Color="#666666" Glyph="&#xE7BF;"/>
+                        </Image.Source>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnCartTapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Grid.Row="0" VerticalOptions="Center" Grid.Column="4" WidthRequest="30" Margin="10,0">
+                        <Image.Source>
+                            <FontImageSource FontFamily="Segoe MDL2 Assets" Color="#666666" Glyph="&#xE77B;"/>
+                        </Image.Source>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnPersonTapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Grid.Row="0" VerticalOptions="Center" Grid.Column="5" WidthRequest="30" Margin="10,0">
+                        <Image.Source>
+                            <FontImageSource FontFamily="Segoe MDL2 Assets" Color="#666666" Glyph="&#xF3B1;"/>
+                        </Image.Source>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnLogoutTapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+            </Border>
+            <!-- Остальное содержимое -->
+            <ScrollView VerticalScrollBarVisibility="Never" Grid.Row="1" VerticalOptions="FillAndExpand">
+                <VerticalStackLayout>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="400"/>
+                            <ColumnDefinition Width="40"/>
+                        </Grid.ColumnDefinitions>
+                        <VerticalStackLayout Margin="20,20" Grid.Column="0">
+                            <VerticalStackLayout.Effects>
+                                <uranium:BlurEffect Mode="Light"/>
+                            </VerticalStackLayout.Effects>
+                            <Label Margin="0,20,0,20" Text="ALL CATEGORIES" VerticalOptions="Center" FontFamily="Battambang-Regular" FontAttributes="Bold" CharacterSpacing="1.6" TextColor="SkyBlue" LineBreakMode="WordWrap" FontSize="28" HorizontalOptions="Center"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <!--contr fever ent gast tooth vet womencare spa firstaid child eye bones-->
+                                </Grid.RowDefinitions>
+                                <Border Margin="10,10,10,10" Stroke="Black" Grid.Column="0" Background="White">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="20"/>
+                                    </Border.StrokeShape>
+                                    <VerticalStackLayout>
+                                        <Image x:Name="fever_img" Source="fever_s.jpg" HeightRequest="150"/>
+                                        <Label Margin="0,20,0,20" Text="Cold and Fever" VerticalOptions="Center" FontFamily="Battambang-Regular" FontAttributes="Bold" TextColor="Black" LineBreakMode="WordWrap" FontSize="24" HorizontalOptions="Center"/>
+                                    </VerticalStackLayout>
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnBtnTappedF"/>
+                                        <PointerGestureRecognizer PointerEntered="OnFeverEnter" PointerExited="OnFeverExit"/>
+                                    </Border.GestureRecognizers>
+                                </Border>
+                                <Border Margin="10,10,10,10" Stroke="Black" Grid.Column="1" Background="White">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="20"/>
+                                    </Border.StrokeShape>
+                                    <VerticalStackLayout>
+                                        <Image  x:Name="ent_img" Source="ent_s.jpg" HeightRequest="150"/>
+                                        <Label Margin="0,20,0,20" Text="ENT" VerticalOptions="Center" FontFamily="Battambang-Regular" FontAttributes="Bold" TextColor="Black" LineBreakMode="WordWrap" FontSize="24" HorizontalOptions="Center"/>
+                                    </VerticalStackLayout>
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnBtnTappedE"/>
+                                        <PointerGestureRecognizer PointerEntered="OnENTEnter" PointerExited="OnENTExit"/>
+                                    </Border.GestureRecognizers>
+                                </Border>
+                                <Border Margin="10,10,10,10" Stroke="Black" Grid.Column="2" Background="White">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="20"/>
+                                    </Border.StrokeShape>
+                                    <VerticalStackLayout>
+                                        <Image  x:Name="gast_img" Source="stomach_s.jpg" HeightRequest="150"/>
+                                        <Label Margin="0,20,0,20" Text="Gastroenterology" VerticalOptions="Center" FontFamily="Battambang-Regular" FontAttributes="Bold" TextColor="Black" LineBreakMode="WordWrap" FontSize="24" HorizontalOptions="Center"/>
+                                    </VerticalStackLayout>
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnBtnTappedG"/>
+                                        <PointerGestureRecognizer PointerEntered="OnGastEnter" PointerExited="OnGastExit"/>
+                                    </Border.GestureRecognizers>
+                                </Border>
+                                <Border Margin="10,10,10,10" Grid.Row="1" Stroke="Black" Grid.Column="0" Background="White">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="20"/>
+                                    </Border.StrokeShape>
+                                    <VerticalStackLayout>
+                                        <Image  x:Name="dent_img" Source="tooth_s.jpg" HeightRequest="150"/>
+                                        <Label Margin="0,20,0,20" Text="Dental" VerticalOptions="Center" FontFamily="Battambang-Regular" FontAttributes="Bold" TextColor="Black" LineBreakMode="WordWrap" FontSize="24" HorizontalOptions="Center"/>
+                                    </VerticalStackLayout>
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnBtnTappedD"/>
+                                        <PointerGestureRecognizer PointerEntered="OnDentEnter" PointerExited="OnDentExit"/>
+                                    </Border.GestureRecognizers>
+                                </Border>
+                                <Border Margin="10,10,10,10" Grid.Row="1" Stroke="Black" Grid.Column="1" Background="White">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="20"/>
+                                    </Border.StrokeShape>
+                                    <VerticalStackLayout>
+                                        <Image  x:Name="bone_img" Source="bone_s.jpg" HeightRequest="150"/>
+                                        <Label Margin="0,20,0,20" Text="Bones" VerticalOptions="Center" FontFamily="Battambang-Regular" FontAttributes="Bold" TextColor="Black" LineBreakMode="WordWrap" FontSize="24" HorizontalOptions="Center"/>
+                                    </VerticalStackLayout>
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnBtnTappedB"/>
+                                        <PointerGestureRecognizer PointerEntered="OnBoneEnter" PointerExited="OnBoneExit"/>
+                                    </Border.GestureRecognizers>
+                                </Border>
+                                <Border Margin="10,10,10,10" Grid.Row="1" Stroke="Black" Grid.Column="2" Background="White">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="20"/>
+                                    </Border.StrokeShape>
+                                    <VerticalStackLayout>
+                                        <Image  x:Name="eye_img" Source="eye_s.jpg" WidthRequest="100" HeightRequest="100" Margin="0,25,0,25"/>
+                                        <Label Margin="0,20,0,20" Text="Ophthalmology" VerticalOptions="Center" FontFamily="Battambang-Regular" FontAttributes="Bold" TextColor="Black" LineBreakMode="WordWrap" FontSize="24" HorizontalOptions="Center"/>
+                                    </VerticalStackLayout>
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnBtnTappedO"/>
+                                        <PointerGestureRecognizer PointerEntered="OnEyeEnter" PointerExited="OnEyeExit"/>
+                                    </Border.GestureRecognizers>
+                                </Border>
+                                <Border Margin="10,10,10,10" Grid.Row="2" Stroke="Black" Grid.Column="0" Background="White">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="20"/>
+                                    </Border.StrokeShape>
+                                    <VerticalStackLayout>
+                                        <Image  x:Name="fa_img" Source="firstaid_s.jpg" HeightRequest="150"/>
+                                        <Label Margin="0,20,0,20" Text="First Aid" VerticalOptions="Center" FontFamily="Battambang-Regular" FontAttributes="Bold" TextColor="Black" LineBreakMode="WordWrap" FontSize="24" HorizontalOptions="Center"/>
+                                    </VerticalStackLayout>
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnBtnTappedFA"/>
+                                        <PointerGestureRecognizer PointerEntered="OnFirstAidEnter" PointerExited="OnFirstAidExit"/>
+                                    </Border.GestureRecognizers>
+                                </Border>
+                                <Border Margin="10,10,10,10" Grid.Row="2" Stroke="Black" Grid.Column="1" Background="White">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="20"/>
+                                    </Border.StrokeShape>
+                                    <VerticalStackLayout>
+                                        <Image x:Name="wom_img" Source="woman_s.jpg" HeightRequest="150"/>
+                                        <Label Margin="0,20,0,20" Text="Women Care" VerticalOptions="Center" FontFamily="Battambang-Regular" FontAttributes="Bold" TextColor="Black" LineBreakMode="WordWrap" FontSize="24" HorizontalOptions="Center"/>
+                                    </VerticalStackLayout>
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnBtnTappedW"/>
+                                        <PointerGestureRecognizer PointerEntered="OnWomanEnter" PointerExited="OnWomanExit"/>
+                                    </Border.GestureRecognizers>
+                                </Border>
+                                <Border Margin="10,10,10,10" Grid.Row="2" Stroke="Black" Grid.Column="2" Background="White">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="20"/>
+                                    </Border.StrokeShape>
+                                    <VerticalStackLayout>
+                                        <Image  x:Name="vet_img" Source="paw_s.jpg" HeightRequest="150"/>
+                                        <Label Margin="0,20,0,20" Text="Veterinary" VerticalOptions="Center" FontFamily="Battambang-Regular" FontAttributes="Bold" TextColor="Black" LineBreakMode="WordWrap" FontSize="24" HorizontalOptions="Center"/>
+                                    </VerticalStackLayout>
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnBtnTappedV"/>
+                                        <PointerGestureRecognizer PointerEntered="OnVetEnter" PointerExited="OnVetExit"/>
+                                    </Border.GestureRecognizers>
+                                </Border>
+                                <Border Margin="10,10,10,10" Grid.Row="3" Stroke="Black" Grid.Column="0" Background="White">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="20"/>
+                                    </Border.StrokeShape>
+                                    <VerticalStackLayout>
+                                        <Image  x:Name="baby_img" Source="baby_s.jpg" HeightRequest="150"/>
+                                        <Label Margin="0,20,0,20" Text="Child Care" VerticalOptions="Center" FontFamily="Battambang-Regular" FontAttributes="Bold" TextColor="Black" LineBreakMode="WordWrap" FontSize="24" HorizontalOptions="Center"/>
+                                    </VerticalStackLayout>
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnBtnTappedCC"/>
+                                        <PointerGestureRecognizer PointerEntered="OnChildEnter" PointerExited="OnChildExit"/>
+                                    </Border.GestureRecognizers>
+                                </Border>
+                                <Border Margin="10,10,10,10" Grid.Row="3" Stroke="Black" Grid.Column="1" Background="White">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="20"/>
+                                    </Border.StrokeShape>
+                                    <VerticalStackLayout>
+                                        <Image x:Name="spa_img" Source="spa_s.jpg" HeightRequest="150"/>
+                                        <Label Margin="0,20,0,20" Text="SPA" VerticalOptions="Center" FontFamily="Battambang-Regular" FontAttributes="Bold" TextColor="Black" LineBreakMode="WordWrap" FontSize="24" HorizontalOptions="Center"/>
+                                    </VerticalStackLayout>
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnBtnTappedS"/>
+                                        <PointerGestureRecognizer PointerEntered="OnSpaEnter" PointerExited="OnSpaExit"/>
+                                    </Border.GestureRecognizers>
+                                </Border>
+                                <Border Margin="10,10,10,10" Grid.Row="3" Stroke="Black" Grid.Column="2" Background="White">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="20"/>
+                                    </Border.StrokeShape>
+                                    <VerticalStackLayout>
+                                        <Image x:Name="lip_img" Source="lips_s.jpg" HeightRequest="150"/>
+                                        <Label Margin="0,20,0,20" Text="Contraception" VerticalOptions="Center" FontFamily="Battambang-Regular" FontAttributes="Bold" TextColor="Black" LineBreakMode="WordWrap" FontSize="24" HorizontalOptions="Center"/>
+                                    </VerticalStackLayout>
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnBtnTappedC"/>
+                                        <PointerGestureRecognizer PointerEntered="OnContEnter" PointerExited="OnContExit"/>
+                                    </Border.GestureRecognizers>
+                                </Border>
+                            </Grid>
+                    </VerticalStackLayout>
+                        <VerticalStackLayout Margin="0,20" VerticalOptions="Start" HeightRequest="900" Grid.Column="2">
+                            <VerticalStackLayout.Effects>
+                                <uranium:BlurEffect Mode="Light"/>
+                            </VerticalStackLayout.Effects>
+                            <Label Margin="0,20,0,20" Text="GET AN EASTER 20% DISCOUNT!" VerticalOptions="Center" FontFamily="Battambang-Regular" FontAttributes="Bold" CharacterSpacing="1.6" TextColor="Orange" LineBreakMode="WordWrap" FontSize="28" HorizontalOptions="Center"/>
+                            <Image Source="bunny.jpg" WidthRequest="300"/>
+                            <Label Margin="40,20,40,20" Text="Celebrate Easter with a healthy dose of savings! Enjoy a 20% discount on medicine purchases over $15.99 when you apply promo code MAUI_SUCKS at checkout. Don't miss out on this egg-citing offer to stock up on essential remedies. Hurry, offer ends soon!" FontSize="18" CharacterSpacing="-0.4" FontFamily="Battambang-Regular" TextColor="AliceBlue"/>
+                        </VerticalStackLayout>
+                    </Grid>
+                    <Border BackgroundColor="White" HeightRequest="100" Stroke="#917c00">
+                        <Grid x:Name="footer">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="75"/>
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Margin="40" Grid.Column="0" Text="PINEAPPLE" CharacterSpacing="1.6" TextColor="#917c00" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="End" />
+                            <!-- Лого -->
+                            <Image Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" WidthRequest="75" Source="logo.png" />
+                            <!-- Название -->
+                            <Label Grid.Row="0" Grid.Column="2" Margin="15" Text="PHARMA" CharacterSpacing="1.6" TextColor="#917c00" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="Start" />
+                            <!-- Кнопки навигации -->
+                        </Grid>
+                    </Border>
+                </VerticalStackLayout>
+            </ScrollView>
+        </Grid>
+    </Grid>
+</ContentPage>

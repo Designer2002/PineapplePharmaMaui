@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+             xmlns:mopupsanim="clr-namespace:Mopups.Animations;assembly=Mopups"
+             x:Class="winui_cooler.ConfirmDeleteAlert"
+             BackgroundColor="#00000040"
+             CloseWhenBackgroundIsClicked="False">
+             <mopups:PopupPage.Animation>
+                <mopupsanim:ScaleAnimation DurationIn="1500" EasingIn="BounceOut" PositionIn="Bottom" PositionOut="Center" ScaleIn="1" ScaleOut="0.7"/>
+             </mopups:PopupPage.Animation>
+    <Border Margin="0,0,0,20" Stroke="DarkBlue" HeightRequest="500"  WidthRequest="500" Background="White" HorizontalOptions="Center" >
+        <Border.StrokeShape>
+            <RoundRectangle Stroke="#917c00" CornerRadius="50"/>
+        </Border.StrokeShape>
+        <VerticalStackLayout Background="Beige" WidthRequest="500" HeightRequest="500" VerticalOptions="Center">
+            <Grid Margin="0,20" WidthRequest="450">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="75"/>
+                </Grid.ColumnDefinitions>
+                <Image HeightRequest="150" WidthRequest="150" Grid.Column="0" IsAnimationPlaying="True" Source="trash.png"></Image>
+                <Label Grid.Column="1" VerticalOptions="Center" FontSize="24" x:Name="title" Text="ARE YOU SURE?" FontFamily="Battambang-Regular" FontAttributes="Bold" TextColor="Navy"/>
+            </Grid>
+            <Label Margin="50,30,50,30" VerticalOptions="Center" HorizontalOptions="Center" FontFamily="Battambang-Regular" TextColor="DeepSkyBlue" FontSize="18" LineBreakMode="WordWrap"  x:Name="alerttext"/>
+            <HorizontalStackLayout HorizontalOptions="Center" Margin="0,30">
+                <ContentView Padding="10,10,10,10" BackgroundColor="OrangeRed" HeightRequest="75">
+                    <HorizontalStackLayout HorizontalOptions="Center">
+                        <Label TextColor="White" VerticalOptions="Center" Text="&#xE750;" FontFamily="Segoe MDL2 Assets" FontSize="24" />
+                        <Label Margin="10" VerticalOptions="Center" FontFamily="Battambang-Regular" TextColor="White" Text="Go Back" FontSize="20"/>
+                    </HorizontalStackLayout>
+                    <ContentView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnBTapped"/>
+                    </ContentView.GestureRecognizers>
+                </ContentView>
+                <ContentView Padding="10,10,10,10" BackgroundColor="Purple" HeightRequest="75">
+                    <HorizontalStackLayout HorizontalOptions="Center">
+                        <Label TextColor="White" VerticalOptions="Center" Text="&#xE74D;" FontFamily="Segoe MDL2 Assets" FontSize="24" />
+                        <Label Margin="10" VerticalOptions="Center" FontFamily="Battambang-Regular" TextColor="White" Text="Delete" FontSize="20"/>
+                    </HorizontalStackLayout>
+                    <ContentView.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnDTapped"/>
+                    </ContentView.GestureRecognizers>
+                </ContentView>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+        
+    </Border>
+</mopups:PopupPage>

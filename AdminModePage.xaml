@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+             x:Class="winui_cooler.AdminModePage"
+             NavigationPage.HasNavigationBar="False" 
+             NavigationPage.BackButtonTitle="">
+    <ContentPage.Background>
+        <LinearGradientBrush>
+            <GradientStopCollection>
+                <GradientStop Color="MediumAquamarine" Offset="0.0"/>
+                <GradientStop Color="Transparent" Offset="0.5"/>
+                <GradientStop Color="MediumOrchid" Offset="1.0"/>
+            </GradientStopCollection>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <!-- Верхнее навигационное меню -->
+            <Border BackgroundColor="#1F5B65" Margin="0,20" Grid.Row="0" VerticalOptions="Start" HeightRequest="100" Stroke="#917c00">
+                <Grid x:Name="navbar">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="40" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Margin="40" Grid.Column="0" Text="PINEAPPLE" CharacterSpacing="1.6" TextColor="LightYellow" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="Start" />
+                    <!-- Лого -->
+                    <Image Grid.Row="0" Grid.Column="1" WidthRequest="75" Source="admin.jpg" />
+                    <!-- Название -->
+                    <Label Grid.Row="0" Grid.Column="2" Margin="15" Text="PHARMA" CharacterSpacing="1.6" TextColor="LightYellow" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="Start" />
+     
+                    <!-- Иконки -->
+                    <Image Grid.Row="0" VerticalOptions="Center" Grid.Column="4" WidthRequest="30" Margin="10,0">
+                        <Image.Source>
+                            <FontImageSource FontFamily="Segoe MDL2 Assets" Color="Yellow" Glyph="&#xE77B;"/>
+                        </Image.Source>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnPersonTapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Grid.Row="0" VerticalOptions="Center" Grid.Column="5" WidthRequest="30" Margin="10,0">
+                        <Image.Source>
+                            <FontImageSource FontFamily="Segoe MDL2 Assets" Color="Yellow" Glyph="&#xF3B1;"/>
+                        </Image.Source>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnLogoutTapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+            </Border>
+            <ScrollView VerticalScrollBarVisibility="Never" Grid.Row="1" VerticalOptions="FillAndExpand">
+                <VerticalStackLayout>
+                    <VerticalStackLayout Margin="0,0,0,20">
+                        <VerticalStackLayout.Effects>
+                            <uranium:BlurEffect Mode="Dark"/>
+                        </VerticalStackLayout.Effects>
+                        <Label HorizontalOptions="Center" Margin="0,40,0,20" Text="ADMINISTRATOR MODE" CharacterSpacing="1.6" TextColor="LightGreen" FontSize="28" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" />
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Frame Grid.Column="0" Margin="40,0,40,40" CornerRadius="20" BorderColor="Black" Background="#66FFFFFF">
+                                <HorizontalStackLayout>
+                                    <Frame Padding="10,10,10,10" Margin="20,20,20,20">
+                                        <Frame.Background>
+                                            <LinearGradientBrush>
+                                                <GradientStopCollection>
+                                                    <GradientStop Color="LightGreen" Offset="0.0"/>
+                                                    <GradientStop Color="White" Offset="0.5"/>
+                                                    <GradientStop Color="MediumSeaGreen" Offset="1.0"/>
+                                                </GradientStopCollection>
+                                            </LinearGradientBrush>
+                                        </Frame.Background>
+                                        <Image WidthRequest="100" HeightRequest="100" Source="add.png"/>
+                                    </Frame>
+                                    <VerticalStackLayout>
+                                        <Label WidthRequest="150" LineBreakMode="WordWrap" Text="ADD NEW MEDICINE" CharacterSpacing="1.6" TextColor="DarkGreen" FontSize="18" FontFamily="Battambang-Regular" VerticalOptions="Center" />
+                                        <Label WidthRequest="150" Margin="0,20" LineBreakMode="WordWrap" Text="Fill a characteristic form to create new medical item." TextColor="Black" FontSize="14" FontFamily="Battambang-Regular" VerticalOptions="Center" />
+                                    </VerticalStackLayout>
+                                </HorizontalStackLayout>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnNewTapped"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                            <Frame Grid.Column="1" Margin="40,0,40,40" CornerRadius="20" BorderColor="Black" Background="#66FFFFFF">
+                                <HorizontalStackLayout>
+                                    <Frame Padding="10,10,10,10" Margin="20,20,20,20">
+                                        <Frame.Background>
+                                            <LinearGradientBrush>
+                                                <GradientStopCollection>
+                                                    <GradientStop Color="Gold" Offset="0.0"/>
+                                                    <GradientStop Color="White" Offset="0.5"/>
+                                                    <GradientStop Color="Orange" Offset="1.0"/>
+                                                </GradientStopCollection>
+                                            </LinearGradientBrush>
+                                        </Frame.Background>
+                                        <Image WidthRequest="100" HeightRequest="100" Source="edit.png"/>
+                                    </Frame>
+                                    <VerticalStackLayout>
+                                        <Label WidthRequest="150" LineBreakMode="WordWrap" Text="EDIT MEDICINE" CharacterSpacing="1.6" TextColor="DarkGoldenrod" FontSize="18" FontFamily="Battambang-Regular" VerticalOptions="Center" />
+                                        <Label WidthRequest="150" Margin="0,20" LineBreakMode="WordWrap" Text="Edit existing medicine item characteristics." TextColor="Black" FontSize="14" FontFamily="Battambang-Regular" VerticalOptions="Center" />
+                                    </VerticalStackLayout>
+                                </HorizontalStackLayout>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnEditTapped"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                            <Frame Grid.Column="2" Margin="40,0,40,40" CornerRadius="20" BorderColor="Black" Background="#66FFFFFF">
+                                <HorizontalStackLayout>
+                                    <Frame Padding="10,10,10,10" Margin="20,20,20,20">
+                                        <Frame.Background>
+                                            <LinearGradientBrush>
+                                                <GradientStopCollection>
+                                                    <GradientStop Color="Crimson" Offset="0.0"/>
+                                                    <GradientStop Color="White" Offset="0.5"/>
+                                                    <GradientStop Color="LightCoral" Offset="1.0"/>
+                                                </GradientStopCollection>
+                                            </LinearGradientBrush>
+                                        </Frame.Background>
+                                        <Image WidthRequest="100" HeightRequest="100" Source="remove.png"/>
+                                    </Frame>
+                                    <VerticalStackLayout>
+                                        <Label WidthRequest="150" LineBreakMode="WordWrap" Text="REMOVE MEDICINE" CharacterSpacing="1.6" TextColor="Maroon" FontSize="18" FontFamily="Battambang-Regular" VerticalOptions="Center" />
+                                        <Label WidthRequest="150" Margin="0,20" LineBreakMode="WordWrap" Text="Delete a medicicne item from database." TextColor="Black" FontSize="14" FontFamily="Battambang-Regular" VerticalOptions="Center" />
+                                    </VerticalStackLayout>
+                                </HorizontalStackLayout>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnDeleteTapped"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                        </Grid>
+                    </VerticalStackLayout>
+                    <Border BackgroundColor="#1F5B65" HeightRequest="100" Stroke="#917c00">
+                        <Grid x:Name="footer">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="75"/>
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Margin="40" Grid.Column="0" Text="PINEAPPLE" CharacterSpacing="1.6" TextColor="LightYellow" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="End" />
+                            <!-- Лого -->
+                            <Image Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" WidthRequest="75" Source="admin.jpg" />
+                            <!-- Название -->
+                            <Label Grid.Row="0" Grid.Column="2" Margin="15" Text="PHARMA" CharacterSpacing="1.6" TextColor="LightYellow" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="Start" />
+                            <!-- Кнопки навигации -->
+                        </Grid>
+                    </Border>
+                </VerticalStackLayout>
+            </ScrollView>
+        </Grid>
+    </Grid>
+</ContentPage>
