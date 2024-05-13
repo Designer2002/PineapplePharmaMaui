@@ -1,0 +1,1 @@
+C:\Users\Student\Documents\maui\pineapple\client\winui_cooler.csproj;x64

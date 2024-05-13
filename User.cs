@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 using winui_cooler;
 
@@ -8,5 +9,4 @@ public class User
     public string Password { get; set; }
     public string Email { get; set; }
     public string Role { get; set; }
-    public List<MedicineShoppingCartView> ShoppingCart {get; set;}
 }
