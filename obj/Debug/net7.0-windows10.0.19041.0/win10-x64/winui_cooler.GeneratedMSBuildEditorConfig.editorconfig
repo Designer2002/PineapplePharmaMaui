@@ -8,99 +8,101 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = winui_cooler
-build_property.ProjectDir = D:\c#\maui\winui_cooler\
+build_property.ProjectDir = C:\Users\Student\Documents\maui\pineapple\client\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[D:/c\#/maui/winui_cooler/AddedToCartAlert.xaml]
+[C:/Users/Student/Documents/maui/pineapple/client/AddedToCartAlert.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = winui_cooler.AddedToCartAlert.xaml
 build_metadata.AdditionalFiles.TargetPath = AddedToCartAlert.xaml
 build_metadata.AdditionalFiles.RelativePath = AddedToCartAlert.xaml
 
-[D:/c\#/maui/winui_cooler/AdminModePage.xaml]
+[C:/Users/Student/Documents/maui/pineapple/client/AdminModePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = winui_cooler.AdminModePage.xaml
 build_metadata.AdditionalFiles.TargetPath = AdminModePage.xaml
 build_metadata.AdditionalFiles.RelativePath = AdminModePage.xaml
 
-[D:/c\#/maui/winui_cooler/App.xaml]
+[C:/Users/Student/Documents/maui/pineapple/client/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = winui_cooler.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[D:/c\#/maui/winui_cooler/AppShell.xaml]
+[C:/Users/Student/Documents/maui/pineapple/client/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = winui_cooler.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[D:/c\#/maui/winui_cooler/CartPage.xaml]
+[C:/Users/Student/Documents/maui/pineapple/client/CartPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = winui_cooler.CartPage.xaml
 build_metadata.AdditionalFiles.TargetPath = CartPage.xaml
 build_metadata.AdditionalFiles.RelativePath = CartPage.xaml
 
-[D:/c\#/maui/winui_cooler/CategoryPage.xaml]
+[C:/Users/Student/Documents/maui/pineapple/client/CategoryPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = winui_cooler.CategoryPage.xaml
 build_metadata.AdditionalFiles.TargetPath = CategoryPage.xaml
 build_metadata.AdditionalFiles.RelativePath = CategoryPage.xaml
 
-[D:/c\#/maui/winui_cooler/ConfirmDeleteAlert.xaml]
+[C:/Users/Student/Documents/maui/pineapple/client/ConfirmDeleteAlert.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = winui_cooler.ConfirmDeleteAlert.xaml
 build_metadata.AdditionalFiles.TargetPath = ConfirmDeleteAlert.xaml
 build_metadata.AdditionalFiles.RelativePath = ConfirmDeleteAlert.xaml
 
-[D:/c\#/maui/winui_cooler/CustomMopupAlert.xaml]
+[C:/Users/Student/Documents/maui/pineapple/client/CustomMopupAlert.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = winui_cooler.CustomMopupAlert.xaml
 build_metadata.AdditionalFiles.TargetPath = CustomMopupAlert.xaml
 build_metadata.AdditionalFiles.RelativePath = CustomMopupAlert.xaml
 
-[D:/c\#/maui/winui_cooler/ItemPage.xaml]
+[C:/Users/Student/Documents/maui/pineapple/client/ItemPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = winui_cooler.ItemPage.xaml
 build_metadata.AdditionalFiles.TargetPath = ItemPage.xaml
 build_metadata.AdditionalFiles.RelativePath = ItemPage.xaml
 
-[D:/c\#/maui/winui_cooler/MainPage.xaml]
+[C:/Users/Student/Documents/maui/pineapple/client/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = winui_cooler.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[D:/c\#/maui/winui_cooler/RegPage.xaml]
+[C:/Users/Student/Documents/maui/pineapple/client/RegPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = winui_cooler.RegPage.xaml
 build_metadata.AdditionalFiles.TargetPath = RegPage.xaml
 build_metadata.AdditionalFiles.RelativePath = RegPage.xaml
 
-[D:/c\#/maui/winui_cooler/Resources/Styles/Colors.xaml]
+[C:/Users/Student/Documents/maui/pineapple/client/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = winui_cooler.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[D:/c\#/maui/winui_cooler/Resources/Styles/Styles.xaml]
+[C:/Users/Student/Documents/maui/pineapple/client/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = winui_cooler.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[D:/c\#/maui/winui_cooler/Shop.xaml]
+[C:/Users/Student/Documents/maui/pineapple/client/Shop.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = winui_cooler.Shop.xaml
 build_metadata.AdditionalFiles.TargetPath = Shop.xaml
 build_metadata.AdditionalFiles.RelativePath = Shop.xaml
 
-[D:/c\#/maui/winui_cooler/StartPage.xaml]
+[C:/Users/Student/Documents/maui/pineapple/client/StartPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = winui_cooler.StartPage.xaml
 build_metadata.AdditionalFiles.TargetPath = StartPage.xaml
 build_metadata.AdditionalFiles.RelativePath = StartPage.xaml
 
-[D:/c\#/maui/winui_cooler/TempPage.xaml]
+[C:/Users/Student/Documents/maui/pineapple/client/TempPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = winui_cooler.TempPage.xaml
 build_metadata.AdditionalFiles.TargetPath = TempPage.xaml

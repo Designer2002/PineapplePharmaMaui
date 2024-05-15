@@ -43,7 +43,7 @@ class ConnectionManager
         {
             // Десериализуем ответ в объект User
             var rdata = Client.GetInstance().responseData;
-            var user = JsonSerializer.Deserialize<User>(rdata, new JsonSerializerOptions(){DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull});
+            var user = JsonSerializer.Deserialize<User>(rdata);
             
             // Устанавливаем текущего пользователя
             UserManager.current = user;
@@ -76,8 +76,8 @@ class ConnectionManager
         var jsonedData = JsonSerializer.Serialize(data);
 
         // Отправляем данные на сервер
-        var task = Client.GetInstance().ConnectAsync(jsonedData);
-        await task;
+        await Client.GetInstance().ConnectAsync(jsonedData);
+        
         if (int.TryParse(Client.GetInstance().responseData, out int responseCode))
         {
             if (responseCode == (int)SentDataMessages.ERROR)
@@ -172,8 +172,7 @@ class ConnectionManager
         var jsonedData = JsonSerializer.Serialize(data);
 
         // Отправляем данные на сервер
-        var task = Client.GetInstance().ConnectAsync(jsonedData);
-        await task;
+        await Client.GetInstance().ConnectAsync(jsonedData);
         int.TryParse(Client.GetInstance().responseData, out int responce);
         if(responce == (int)SentDataMessages.SUCCESS) return true;
         return false;

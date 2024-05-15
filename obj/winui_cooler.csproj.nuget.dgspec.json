@@ -1,24 +1,29 @@
 {
   "format": 1,
   "restore": {
-    "D:\\c#\\maui\\winui_cooler\\winui_cooler.csproj": {}
+    "C:\\Users\\Student\\Documents\\maui\\pineapple\\client\\winui_cooler.csproj": {}
   },
   "projects": {
-    "D:\\c#\\maui\\winui_cooler\\winui_cooler.csproj": {
+    "C:\\Users\\Student\\Documents\\maui\\pineapple\\client\\winui_cooler.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\c#\\maui\\winui_cooler\\winui_cooler.csproj",
+        "projectUniqueName": "C:\\Users\\Student\\Documents\\maui\\pineapple\\client\\winui_cooler.csproj",
         "projectName": "winui_cooler",
-        "projectPath": "D:\\c#\\maui\\winui_cooler\\winui_cooler.csproj",
-        "packagesPath": "C:\\Users\\st\\.nuget\\packages\\",
-        "outputPath": "D:\\c#\\maui\\winui_cooler\\obj\\",
+        "projectPath": "C:\\Users\\Student\\Documents\\maui\\pineapple\\client\\winui_cooler.csproj",
+        "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Student\\Documents\\maui\\pineapple\\client\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\st\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
+          "net7.0-windows10.0.19041.0",
           "net7.0-windows10.0.19041.0"
         ],
         "sources": {
@@ -69,34 +74,24 @@
               "version": "[7.0.0, )",
               "autoReferenced": true
             },
-            "Microsoft.Extensions.Logging.Abstractions": {
-              "target": "Package",
-              "version": "[7.0.0, )",
-              "autoReferenced": true
-            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[7.0.0, )"
             },
             "Microsoft.Maui.Graphics": {
               "target": "Package",
-              "version": "[7.0.49, )",
+              "version": "[7.0.101, )",
               "autoReferenced": true
             },
             "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop": {
               "target": "Package",
-              "version": "[7.0.49, )",
-              "autoReferenced": true
-            },
-            "Microsoft.Windows.SDK.BuildTools": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[10.0.22621.1, )",
+              "version": "[7.0.101, )",
               "autoReferenced": true
             },
             "Microsoft.WindowsAppSDK": {
               "target": "Package",
-              "version": "[1.2.221209.1, )"
+              "version": "[1.2.221209.1, )",
+              "autoReferenced": true
             },
             "Mopups": {
               "target": "Package",
@@ -145,11 +140,35 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[7.0.18, 7.0.18]"
+              "version": "[7.0.14, 7.0.14]"
+            },
+            {
+              "name": "Microsoft.Maui.Controls.Ref.win",
+              "version": "[7.0.101, 7.0.101]"
+            },
+            {
+              "name": "Microsoft.Maui.Controls.Runtime.win",
+              "version": "[7.0.101, 7.0.101]"
+            },
+            {
+              "name": "Microsoft.Maui.Core.Ref.win",
+              "version": "[7.0.101, 7.0.101]"
+            },
+            {
+              "name": "Microsoft.Maui.Core.Runtime.win",
+              "version": "[7.0.101, 7.0.101]"
+            },
+            {
+              "name": "Microsoft.Maui.Essentials.Ref.win",
+              "version": "[7.0.101, 7.0.101]"
+            },
+            {
+              "name": "Microsoft.Maui.Essentials.Runtime.win",
+              "version": "[7.0.101, 7.0.101]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[7.0.18, 7.0.18]"
+              "version": "[7.0.14, 7.0.14]"
             },
             {
               "name": "Microsoft.Windows.SDK.NET.Ref",
@@ -157,7 +176,7 @@
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-              "version": "[7.0.18, 7.0.18]"
+              "version": "[7.0.14, 7.0.14]"
             }
           ],
           "frameworkReferences": {
@@ -177,7 +196,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.315\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

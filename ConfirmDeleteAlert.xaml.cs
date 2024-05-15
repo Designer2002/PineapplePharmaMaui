@@ -27,7 +27,7 @@ public partial class ConfirmDeleteAlert : Mopups.Pages.PopupPage
     {
         await Animations.BackColorAndScaleBlink(sender as ContentView, Colors.OrangeRed, Colors.LawnGreen, 1.0, 1.2);
         await ConnectionManager.TryDeleteFromCart(CartPage.id);
-        CartPage.ItemRemoved?.Invoke(sender, null);
+        await Navigation.PushAsync(new CartPage());
         await MopupService.Instance.PopAsync();
 
 

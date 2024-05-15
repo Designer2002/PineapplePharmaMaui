@@ -730,7 +730,6 @@ C:\Users\Student\Documents\maui\pineapple\client\bin\Debug\net7.0-windows10.0.19
 C:\Users\Student\Documents\maui\pineapple\client\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\winui_cooler.dll
 C:\Users\Student\Documents\maui\pineapple\client\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\winui_cooler.pdb
 C:\Users\Student\Documents\maui\pineapple\client\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri
-C:\Users\Student\Documents\maui\pineapple\client\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml
 C:\Users\Student\Documents\maui\pineapple\client\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AsyncAwaitBestPractices.dll
 C:\Users\Student\Documents\maui\pineapple\client\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.dll
 C:\Users\Student\Documents\maui\pineapple\client\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.Core.dll
@@ -1150,4 +1149,5 @@ C:\Users\Student\Documents\maui\pineapple\client\obj\Debug\net7.0-windows10.0.19
 C:\Users\Student\Documents\maui\pineapple\client\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 C:\Users\Student\Documents\maui\pineapple\client\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\Student\Documents\maui\pineapple\client\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Student\Documents\maui\pineapple\client\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml
 C:\Users\Student\Documents\maui\pineapple\client\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt

@@ -74,10 +74,12 @@ public partial class CartPage : ContentPage
 
     private async void OnUpdateRaised(object sender, EventArgs e)
     {
-        Cart = await GetCart();
-        RemoveIfDeleted(int.Parse((sender as Label).ClassId));
-        await HideIfEmpty();
-        Update = false;
+        //Cart = await GetCart();
+        //RemoveIfDeleted(int.Parse((sender as Label).ClassId));
+        //await HideIfEmpty();
+        //Update = false;
+
+        //FUCKING SHIT ERROR BDSM ORGY GANGNAM STYLE FUCK MAUI!!!
     }
 
     private void OnItemRemoved(object sender, EventArgs e)
@@ -143,9 +145,10 @@ public partial class CartPage : ContentPage
         OnGlyphTapped(sender, e);
         await Navigation.PushAsync(new StartPage());
     }
-    private void OnCartTapped(object sender, TappedEventArgs e)
+    private async void OnCartTapped(object sender, TappedEventArgs e)
     {
         OnGlyphTapped(sender, e);
+        await Navigation.PushAsync(new CartPage());
     }
     private async void OnNewsLabelTapped(object sender, TappedEventArgs e)
     {
@@ -155,15 +158,15 @@ public partial class CartPage : ContentPage
         await Navigation.PushAsync(mp);
         mp.ScrollToNewsLabel();
     }
-    private void OnShopLabelTapped(object sender, TappedEventArgs e)
+    private async void OnShopLabelTapped(object sender, TappedEventArgs e)
     {
         OnLabelTapped(sender, e);
         Navigation.PushAsync(new Shop());
     }
-    private void OnCatLabelTapped(object sender, TappedEventArgs e)
+    private async void OnCatLabelTapped(object sender, TappedEventArgs e)
     {
         OnLabelTapped(sender, e);
-        Navigation.PushAsync(new CategoryPage());
+        await Navigation.PushAsync(new CategoryPage());
     }
     private async void OnLabelTapped(object sender, TappedEventArgs e)
     {
@@ -173,10 +176,10 @@ public partial class CartPage : ContentPage
     {
         OnGlyphTapped(sender, e);
     }
-    private void OnHomeTapped(object sender, TappedEventArgs e)
+    private async void OnHomeTapped(object sender, TappedEventArgs e)
     {
         OnLabelTapped(sender, e);
-        Navigation.PushAsync(new MainPage());
+        await Navigation.PushAsync(new MainPage());
     }
     private async void OnGlyphTapped(object sender, TappedEventArgs e)
     {
