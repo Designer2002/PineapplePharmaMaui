@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+    xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+             x:Class="winui_cooler.AddElement"
+             NavigationPage.HasNavigationBar="False" 
+             NavigationPage.BackButtonTitle="">
+    <ContentPage.Background>
+        <LinearGradientBrush>
+            <GradientStopCollection>
+                <GradientStop Color="CadetBlue" Offset="0.0"/>
+                <GradientStop Color="Transparent" Offset="0.5"/>
+                <GradientStop Color="GreenYellow" Offset="1.0"/>
+            </GradientStopCollection>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ContentPage.Resources>
+        <FontImageSource x:Key="NameInfoIcon" Color="MidnightBlue" FontFamily="Segoe MDL2 Assets" Glyph="&#xF167;" />
+        <FontImageSource x:Key="PrescriptionIcon" Color="MidnightBlue" FontFamily="Segoe MDL2 Assets" Glyph="&#xF0E3;" />
+        <FontImageSource x:Key="PriceIcon" Color="MidnightBlue" FontFamily="Segoe MDL2 Assets" Glyph="&#xEC59;" />
+        <FontImageSource x:Key="ExpirationDate" Color="MidnightBlue" FontFamily="Segoe MDL2 Assets" Glyph="&#xED28;" />
+        <FontImageSource x:Key="DescriptionIcon" Color="MidnightBlue" FontFamily="Segoe MDL2 Assets" Glyph="&#xE8BD;" />
+        <FontImageSource x:Key="ActiveComponenticon" Color="MidnightBlue" FontFamily="Segoe MDL2 Assets" Glyph="&#xF354;" />
+        <FontImageSource x:Key="DistributerIcon" Color="MidnightBlue" FontFamily="Segoe MDL2 Assets" Glyph="&#xE909;" />
+        <FontImageSource x:Key="ReleaseFormIcon" Color="MidnightBlue" FontFamily="Segoe MDL2 Assets" Glyph="&#xEA37;" />
+        <FontImageSource x:Key="CategoryIcon" Color="White" FontFamily="Segoe MDL2 Assets" Glyph="&#xE707;" />
+    </ContentPage.Resources>
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <!-- Верхнее навигационное меню -->
+            <Border BackgroundColor="#1F5B65" Margin="0,20" Grid.Row="0" VerticalOptions="Start" HeightRequest="100" Stroke="#917c00">
+                <Grid x:Name="navbar">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="40" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Margin="40" Grid.Column="0" Text="PINEAPPLE" CharacterSpacing="1.6" TextColor="LightYellow" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="Start" />
+                    <!-- Лого -->
+                    <Image Grid.Row="0" Grid.Column="1" WidthRequest="75" Source="admin.jpg" />
+                    <!-- Название -->
+                    <Label Grid.Row="0" Grid.Column="2" Margin="15" Text="PHARMA" CharacterSpacing="1.6" TextColor="LightYellow" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="Start" />
+
+                    <!-- Иконки -->
+                    <Image Grid.Row="0" VerticalOptions="Center" Grid.Column="4" WidthRequest="30" Margin="10,0">
+                        <Image.Source>
+                            <FontImageSource FontFamily="Segoe MDL2 Assets" Color="Yellow" Glyph="&#xE77B;"/>
+                        </Image.Source>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnPersonTapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Grid.Row="0" VerticalOptions="Center" Grid.Column="5" WidthRequest="30" Margin="10,0">
+                        <Image.Source>
+                            <FontImageSource FontFamily="Segoe MDL2 Assets" Color="Yellow" Glyph="&#xF3B1;"/>
+                        </Image.Source>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnLogoutTapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+            </Border>
+            <ScrollView VerticalScrollBarVisibility="Never" Grid.Row="1" VerticalOptions="FillAndExpand">
+                <VerticalStackLayout>
+                    <VerticalStackLayout Margin="0,0,0,20">
+                        <VerticalStackLayout.Effects>
+                            <uranium:BlurEffect Mode="Dark"/>
+                        </VerticalStackLayout.Effects>
+                        <Label HorizontalOptions="Center" Margin="0,40,0,20" Text="ADD NEW ITEM" CharacterSpacing="1.6" TextColor="LightGreen" FontSize="28" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" />
+                        <Label HorizontalOptions="Center" Margin="0,0,0,20" Text="Choose or enter some data to add" CharacterSpacing="1.6" TextColor="Black" FontSize="20" FontFamily="Battambang-Regular" VerticalOptions="Center" />
+                        <material:PickerField WidthRequest="800" x:Name="cat" TitleColor="GhostWhite" AccentColor="Gainsboro" BackgroundColor="#062334" BorderColor="Transparent" FontFamily="Battambang-Regular" FontSize="20" AllowClear="True" Title="Choose a category" Icon="{StaticResource CategoryIcon}" CornerRadius="0"/>
+                        <material:TextField
+     TitleColor="Navy"
+     TextColor="Black"
+     WidthRequest="800"
+     HorizontalOptions="Center"
+     FontFamily="Battambang-Regular"
+     x:Name="name_entry"
+     Title="Naming Of Medicine"
+     Icon="{StaticResource NameInfoIcon}"
+     AccentColor="DeepSkyBlue"
+     BorderColor="MidnightBlue">
+                            <material:TextField.Attachments>
+                                <Image x:Name="name_invalid_image" Source="error.png" HeightRequest="20" IsVisible="False"/>
+                            </material:TextField.Attachments>
+                        </material:TextField>
+                        <Label WidthRequest="800" TextColor="Red" Margin="100,0" FontFamily="Battambang-Regular" IsVisible="False" FontSize="12" x:Name="invalid_name"></Label>
+                        <StackLayout Padding="20">
+                            <HorizontalStackLayout WidthRequest="800" Margin="5" >
+                                <Label FontFamily="Segoe MDL2 Assets" FontSize="24" TextColor="Navy" Text="&#xEC59;" Margin="5,0,5,0"/>
+                                <Label FontFamily="Battambang-Regular" Text="Price (in $$$):" TextColor="Navy" FontSize="18"/>
+                                <Label x:Name="value" FontFamily="Battambang-Regular" Margin="20,0" Text="$29.99" TextColor="Black" FontSize="18"/>
+                            </HorizontalStackLayout>
+                            <Slider WidthRequest="700" Minimum ="0" Maximum="100" Value="30" ValueChanged="Slider_ValueChanged"
+        MinimumTrackColor="SkyBlue" MaximumTrackColor="LightPink" ThumbColor="MediumOrchid" />
+                        </StackLayout>
+                        <material:TextField
+TitleColor="Navy"
+TextColor="Black"
+WidthRequest="800"
+HorizontalOptions="Center"
+FontFamily="Battambang-Regular"
+x:Name="comp_entry"
+                            BorderColor="MidnightBlue"
+Title="Active Component (leave null if empty)"
+Icon="{StaticResource ActiveComponenticon}"
+AccentColor="DeepSkyBlue">
+                        </material:TextField>
+                        <material:TextField
+TitleColor="Navy"
+TextColor="Black"
+WidthRequest="800"
+HorizontalOptions="Center"
+FontFamily="Battambang-Regular"
+x:Name="description_entry"
+Title="Description Of Medicine"
+Icon="{StaticResource DescriptionIcon}"
+AccentColor="DeepSkyBlue"
+BorderColor="MidnightBlue">
+                            <material:TextField.Attachments>
+                                <Image x:Name="description_invalid_image" Source="error.png" HeightRequest="20" IsVisible="False"/>
+                            </material:TextField.Attachments>
+                        </material:TextField>
+                        <Label WidthRequest="800" TextColor="Red" Margin="100,0" FontFamily="Battambang-Regular" IsVisible="False" FontSize="12" x:Name="invalid_description"></Label>
+                        <material:TextField
+TitleColor="Navy"
+TextColor="Black"
+WidthRequest="800"
+HorizontalOptions="Center"
+FontFamily="Battambang-Regular"
+x:Name="release_entry"
+Title="Release Form"
+                            BorderColor="MidnightBlue"
+Icon="{StaticResource ReleaseFormIcon}"
+AccentColor="DeepSkyBlue">
+                            <material:TextField.Attachments>
+                                <Image x:Name="release_invalid_image" Source="error.png" HeightRequest="20" IsVisible="False"/>
+                            </material:TextField.Attachments>
+                        </material:TextField>
+                        <Label WidthRequest="800" TextColor="Red" Margin="100,0" FontFamily="Battambang-Regular" IsVisible="False" FontSize="12" x:Name="invalid_release"></Label>
+                        <material:CheckBox HorizontalOptions="Center" WidthRequest="800" Margin="0,20,0,20" Text="Prescription" IsChecked="True" x:Name="Prescription" FontFamily="Battambang-Regular" TextFontSize="18" IconColor="Blue" ValidationColor="SkyBlue"/>
+                        <material:TextField
+TitleColor="Navy"
+TextColor="Black"
+WidthRequest="800"
+HorizontalOptions="Center"
+FontFamily="Battambang-Regular"
+x:Name="dist_entry"
+Title="Distributer Country"
+                            BorderColor="MidnightBlue"
+Icon="{StaticResource DistributerIcon}"
+AccentColor="DeepSkyBlue">
+                            <material:TextField.Attachments>
+                                <Image x:Name="dist_invalid_image" Source="error.png" HeightRequest="20" IsVisible="False"/>
+                            </material:TextField.Attachments>
+                        </material:TextField>
+                        <Label WidthRequest="800" TextColor="Red" Margin="100,0" FontFamily="Battambang-Regular" IsVisible="False" FontSize="12" x:Name="dist_release"></Label>
+                        <StackLayout Padding="20">
+                            <HorizontalStackLayout WidthRequest="800" Margin="5" >
+                                <Label FontFamily="Segoe MDL2 Assets" FontSize="24" TextColor="Navy" Text="&#xED28;" Margin="5,0,5,0"/>
+                                <Label FontFamily="Battambang-Regular" Text="Shelf Life (years):" TextColor="Navy" FontSize="18"/>
+                                <Label x:Name="value2" FontFamily="Battambang-Regular" Margin="20,0" Text="1" TextColor="Black" FontSize="18"/>
+                            </HorizontalStackLayout>
+                            <Slider WidthRequest="700" Minimum ="0" Maximum="10" Value="1" ValueChanged="Slider_ValueChanged_1"
+MinimumTrackColor="SkyBlue" MaximumTrackColor="LightPink" ThumbColor="MediumOrchid" />
+                        </StackLayout>
+                        <ContentView x:Name="confirm" Margin="0,0,0,40" WidthRequest="400" HeightRequest="75" BackgroundColor="#333333"  HorizontalOptions="Center">
+                            <Label  Text="ADD" FontSize="20" TextColor="White" HorizontalOptions="Center" FontFamily="Battambang-Regular" FontAttributes="Bold" VerticalOptions="Center">
+                            </Label>
+                            <ContentView.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Add_Tapped"/>
+                            </ContentView.GestureRecognizers>
+                        </ContentView>
+                    </VerticalStackLayout>
+                    <Border BackgroundColor="#1F5B65" HeightRequest="100" Stroke="#917c00">
+                        <Grid x:Name="footer">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="75"/>
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Margin="40" Grid.Column="0" Text="PINEAPPLE" CharacterSpacing="1.6" TextColor="LightYellow" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="End" />
+                            <!-- Лого -->
+                            <Image Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" WidthRequest="75" Source="admin.jpg" />
+                            <!-- Название -->
+                            <Label Grid.Row="0" Grid.Column="2" Margin="15" Text="PHARMA" CharacterSpacing="1.6" TextColor="LightYellow" FontSize="16" FontAttributes="Bold" FontFamily="Battambang-Regular" VerticalOptions="Center" HorizontalOptions="Start" />
+                            <!-- Кнопки навигации -->
+                        </Grid>
+                    </Border>
+                </VerticalStackLayout>
+            </ScrollView>
+        </Grid>
+    </Grid>
+</ContentPage>

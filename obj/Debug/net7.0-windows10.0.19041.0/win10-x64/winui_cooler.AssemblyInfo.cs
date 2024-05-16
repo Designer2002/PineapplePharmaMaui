@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("winui_cooler")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+7eb056a15b5d4b4a4b80c8a76d7b9d39e65e9ecf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("winui_cooler")]
 [assembly: System.Reflection.AssemblyTitleAttribute("winui_cooler")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

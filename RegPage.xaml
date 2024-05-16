@@ -23,7 +23,7 @@
                 <input:FormView.Effects>
                     <uranium:BlurEffect Mode="Dark" />
                 </input:FormView.Effects>
-                <Image HorizontalOptions="Center" Source="logo.png" MaximumHeightRequest="100" Margin="0, 20, 0, 0"/>
+                <Image HorizontalOptions="Center" Source="logo.png" MaximumHeightRequest="100" Margin="0, -10, 0, 0"/>
                 <Label FontFamily="Battambang-Regular" TextColor="White" Text="Create A New Account" FontSize="22" HorizontalOptions="Center"/>
                 <Label FontFamily="Battambang-Regular" TextColor="LightYellow" Text="Join our community!" FontSize="14" HorizontalOptions="Center"/>
                 <Border Stroke="DarkGray" HeightRequest="50"  MaximumWidthRequest="400" Background="White" HorizontalOptions="Center" >

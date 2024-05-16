@@ -19,10 +19,12 @@ class ConnectionManager
         ADD_TO_CART,
         GET_BY_ID,
         DELETE_FROM_CART,
-        SET_CART_ITEM_COUNT
+        SET_CART_ITEM_COUNT,
+        ADD_TO_CATALOG
     }
 
-    public async static Task<bool> TryLogin(string email, string password)
+
+    public async static Task<User> TryLogin(string email, string password)
     {
         var data = new { QueryType = 1, Email = email, Password = password };
 
@@ -36,7 +38,7 @@ class ConnectionManager
         {
             if (responseCode == (int)SentDataMessages.ERROR)
             {
-                return false; // Ошибка входа
+                return null; // Ошибка входа
             }
         }
         else
@@ -48,10 +50,10 @@ class ConnectionManager
             // Устанавливаем текущего пользователя
             UserManager.current = user;
 
-            return true; // Успешный вход
+            return user; // Успешный вход
         }
        
-        return false;
+        return null;
     }
 
     public async static Task<bool> TryRegister(string name, string email, string password)
@@ -190,6 +192,17 @@ class ConnectionManager
         await task;
         int.TryParse(Client.GetInstance().responseData, out int responce);
         if(responce == (int)SentDataMessages.SUCCESS) return true;
+        return false;
+    }
+    public static async Task<bool> TryAddToCatalog(Medicine medicine)
+    {
+        var data = new { QueryType = 9, Medicine = medicine };
+        var jsonedData = JsonSerializer.Serialize(data);
+
+        // Отправляем данные на сервер
+        await Client.GetInstance().ConnectAsync(jsonedData);
+        int.TryParse(Client.GetInstance().responseData, out int responce);
+        if (responce == (int)SentDataMessages.SUCCESS) return true;
         return false;
     }
 }

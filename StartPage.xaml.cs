@@ -55,10 +55,16 @@ namespace winui_cooler
         private async void LoginOnTapGestureRecognizerTapped(object sender, TappedEventArgs args)
         {
             await Animations.BackColorAndScaleBlink(login_btn, dirtyYellow, darkGray, 1.0, 1.4);
-            if(!await ConnectionManager.TryLogin(email_entry.Text, password_entry.Text)) await MopupService.Instance.PushAsync(new CustomMopupAlert());
-            else await Navigation.PushAsync(new MainPage());
-            
-            
+            var user = await ConnectionManager.TryLogin(email_entry.Text, password_entry.Text);
+            if (user == null)
+            {
+                await MopupService.Instance.PushAsync(new CustomMopupAlert());
+                return;
+            }
+            else if (user.Role == "Customer") await Navigation.PushAsync(new MainPage());
+            else if (user.Role == "Administrator") await Navigation.PushAsync(new AdminModePage());
+
+
         }
 
 

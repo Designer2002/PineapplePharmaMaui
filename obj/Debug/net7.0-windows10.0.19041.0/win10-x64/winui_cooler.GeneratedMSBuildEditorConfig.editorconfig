@@ -18,6 +18,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = winui_cooler.AddedToCartAl
 build_metadata.AdditionalFiles.TargetPath = AddedToCartAlert.xaml
 build_metadata.AdditionalFiles.RelativePath = AddedToCartAlert.xaml
 
+[C:/Users/Student/Documents/maui/pineapple/client/AddElement.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = winui_cooler.AddElement.xaml
+build_metadata.AdditionalFiles.TargetPath = AddElement.xaml
+build_metadata.AdditionalFiles.RelativePath = AddElement.xaml
+
 [C:/Users/Student/Documents/maui/pineapple/client/AdminModePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = winui_cooler.AdminModePage.xaml

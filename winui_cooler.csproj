@@ -63,5 +63,10 @@
 	</ItemGroup>
 	<ItemGroup Condition="$(TargetFramework.Contains('windows'))">
 	</ItemGroup>
+	<ItemGroup>
+	  <MauiXaml Update="AddElement.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
 
 </Project>

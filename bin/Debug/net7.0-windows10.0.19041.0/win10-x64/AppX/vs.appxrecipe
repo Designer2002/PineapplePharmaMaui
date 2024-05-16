@@ -29,29 +29,29 @@
     <AppXManifest Include="C:\Users\Student\Documents\maui\pineapple\client\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-05-15T11:07:07.966</Modified>
+      <Modified>2024-05-16T14:57:42.941</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Student\Documents\maui\pineapple\client\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-05-15T11:06:12.351</Modified>
+      <Modified>2024-05-16T14:46:47.007</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Student\Documents\maui\pineapple\client\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\winui_cooler.runtimeconfig.json">
       <PackagePath>winui_cooler.runtimeconfig.json</PackagePath>
-      <Modified>2024-05-15T07:56:43.160</Modified>
+      <Modified>2024-05-16T07:25:52.369</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Student\Documents\maui\pineapple\client\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\winui_cooler.dll">
       <PackagePath>winui_cooler.dll</PackagePath>
-      <Modified>2024-05-15T11:06:09.710</Modified>
+      <Modified>2024-05-16T14:57:39.977</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Student\Documents\maui\pineapple\client\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>winui_cooler.exe</PackagePath>
-      <Modified>2024-05-15T11:06:09.773</Modified>
+      <Modified>2024-05-16T14:57:39.989</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Student\Documents\maui\pineapple\client\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\winui_cooler.deps.json">
       <PackagePath>winui_cooler.deps.json</PackagePath>
-      <Modified>2024-05-15T07:56:43.145</Modified>
+      <Modified>2024-05-16T13:28:05.637</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Student\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.14\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>

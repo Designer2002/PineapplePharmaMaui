@@ -24,6 +24,7 @@ public partial class AdminModePage : ContentPage
     private async void OnNewTapped(object sender, TappedEventArgs e)
     {
         await Animations.ButtonFrameColorBlink(sender as Frame, Colors.Black, Colors.LawnGreen);
+        await Navigation.PushAsync(new AddElement());
     }
 
     private async void OnEditTapped(object sender, TappedEventArgs e)

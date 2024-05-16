@@ -13,12 +13,12 @@
         <FontImageSource x:Key="EmailIcon" Color="Black" FontFamily="Segoe MDL2 Assets" Glyph="&#xE715;" />
     </ContentPage.Resources>
     <Grid x:Name="grd">
-        <Image  Aspect="AspectFill" Source="login_bg.jpg" MinimumHeightRequest="768"/>
+        <Image Aspect="AspectFill" Source="login_bg.jpg" MinimumHeightRequest="768"/>
         <VerticalStackLayout WidthRequest="600" HorizontalOptions="Center" MinimumHeightRequest="968">
             <VerticalStackLayout.Effects>
                 <uranium:BlurEffect AccentColor="White" AccentOpacity="0.84"/>
             </VerticalStackLayout.Effects>
-            <Image HorizontalOptions="Center" Source="logo.png" MaximumHeightRequest="100" Margin="0, 20, 0, 0"/>
+            <Image HorizontalOptions="Center" Source="logo.png" MaximumHeightRequest="100" Margin="0, -10, 0, 0"/>
             <Label FontFamily="Battambang-Regular" Text="Login To Your Account" FontSize="22" HorizontalOptions="Center"/>
             <Label FontFamily="Battambang-Regular" TextColor="#80741f" Text="Explore a new world of our goods!" FontSize="14" HorizontalOptions="Center"/>
             <Border Stroke="Gray" HeightRequest="50"  MaximumWidthRequest="400" Background="White" HorizontalOptions="Center" >
